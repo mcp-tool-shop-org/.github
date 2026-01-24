@@ -1,0 +1,148 @@
+# MCP Tool Shop - AI-Native Development Toolkit
+
+> Production-grade MCP servers for semantic search, code analysis, AI orchestration, and multimodal generation
+
+## Overview
+
+The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) servers designed for local AI infrastructure. Each tool is built for production use with comprehensive error handling, semantic search capabilities, and modular architecture.
+
+**Philosophy:** Syntropy above all else - systematic optimization, order, and production-ready solutions over quick fixes.
+
+## Core Infrastructure
+
+### Tool Compass
+**Semantic MCP Tool Discovery & Orchestration**
+- 115+ indexed tools across 6 backend servers
+- HNSW-based semantic search with Ollama embeddings
+- Progressive disclosure pattern (compass → describe → execute)
+- Tool chains and workflow detection
+- Analytics and hot cache optimization
+- Location: https://github.com/mcp-tool-shop/tool-compass
+
+### File Compass  
+**Semantic File Search for AI Workstations**
+- HNSW indexing with local embeddings (Ollama)
+- Sub-100ms search across large codebases
+- Project-aware context boundaries
+- Integration with Tool Compass for unified discovery
+- Location: https://github.com/mcp-tool-shop/file-compass
+
+## AI Generation & Inference
+
+### Comfy-Headless
+**Production ComfyUI Client with AI Prompt Intelligence**
+- Headless ComfyUI orchestration
+- AI-powered prompt enhancement
+- Video generation workflows
+- Modern Gradio UI
+- Queue management and history tracking
+- Location: https://github.com/mcp-tool-shop/comfy-headless
+
+### Backpropagate
+**Headless LLM Fine-Tuning Framework**
+- Simple Python API with smart defaults
+- Multi-run SLAO training
+- GGUF export for Ollama/llama.cpp
+- Full Windows + WSL2 support
+- Production-grade error handling
+- Location: https://github.com/mcp-tool-shop/backpropagate
+
+## Code Analysis & Development
+
+### Dev-Brain
+**AI-Powered Code Analysis MCP Server**
+- Test generation (unit, integration, e2e)
+- Security audits and vulnerability detection
+- Refactoring suggestions
+- Code health scoring (49 detection patterns)
+- Multi-language support (Python, JS/TS, PowerShell, CSS, HTML)
+- Location: https://github.com/mcp-tool-shop/dev-brain
+
+### Integradio
+**Vector-Embedded Gradio Components**
+- Semantic codebase navigation
+- AI-native UI components
+- Context-aware search in Gradio interfaces
+- Location: https://github.com/mcp-tool-shop/integradio
+
+## Architecture Principles
+
+1. **Local-First**: All tools run on local infrastructure (RTX 5080 optimized)
+2. **Semantic Search**: HNSW + Ollama embeddings across all discovery layers
+3. **Production-Ready**: Comprehensive error handling, logging, analytics
+4. **Modular Design**: Tools compose together via MCP protocol
+5. **FastMCP Framework**: Built on modern Python MCP SDK
+
+## Technology Stack
+
+- **MCP Protocol**: Model Context Protocol for tool interop
+- **Embeddings**: Ollama (nomic-embed-text)
+- **Vector Search**: HNSW (hnswlib)
+- **Frameworks**: FastMCP, Gradio, FastAPI
+- **Inference**: ComfyUI, TensorRT, vLLM
+- **Languages**: Python 3.11+, PowerShell, TypeScript
+
+## Integration Patterns
+
+```
+Tool Compass (Orchestrator)
+    ├── File Compass (Semantic file search)
+    ├── Dev-Brain (Code analysis)
+    ├── Comfy-Headless (Image/video generation)
+    ├── Backpropagate (Model fine-tuning)
+    └── Integradio (UI components)
+```
+
+## Use Cases
+
+**For AI Agents:**
+- Discover tools by intent, not memory (Tool Compass)
+- Navigate codebases semantically (File Compass)
+- Generate test suites automatically (Dev-Brain)
+- Create visual assets on-demand (Comfy-Headless)
+
+**For Developers:**
+- Build production MCP servers (architecture patterns)
+- Integrate semantic search into applications
+- Fine-tune models for specific domains
+- Automate code quality workflows
+
+## Performance Characteristics
+
+- **Tool Discovery**: <20ms average latency
+- **File Search**: <100ms for 10k+ file codebases
+- **Image Generation**: 2-3x speedup with TensorRT
+- **Code Analysis**: 49 patterns, 11 categories
+
+## Getting Started
+
+1. Install Tool Compass for unified discovery
+2. Configure backends (bridge, doc, voice, comfy, video, chat)
+3. Use semantic search to find tools by intent
+4. Compose workflows across multiple MCP servers
+
+## Repository Standards
+
+All repositories follow:
+- Comprehensive READMEs with quickstart
+- llms.txt for AI context
+- Semantic versioning (tags)
+- GitHub Actions CI/CD
+- Production-grade error handling
+- Detailed API documentation
+
+## Community & Support
+
+- Organization: https://github.com/mcp-tool-shop
+- Issues: Individual repo issue trackers
+- Philosophy: Syntropy above all else
+
+## License
+
+Each repository has its own license - check individual repos for details.
+
+---
+
+*Last Updated: 2026-01-24*
+*Total Repositories: 14*
+*Active MCP Servers: 6*
