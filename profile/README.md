@@ -1,14 +1,14 @@
 # 🛠️ MCP Tool Shop
 
-> **Production-grade MCP servers for the agentic future**  
-> Semantic search • Code analysis • AI orchestration • Multimodal generation
+> **Production-grade MCP servers for the agentic future**
+> Semantic search • Code analysis • AI orchestration • Verifiable provenance
 
-[![Tool Compass](https://img.shields.io/badge/Tool-Compass-6366f1)](https://github.com/mcp-tool-shop/tool-compass)
-[![File Compass](https://img.shields.io/badge/File-Compass-8b5cf6)](https://github.com/mcp-tool-shop/file-compass)
-[![Comfy Headless](https://img.shields.io/badge/Comfy-Headless-ec4899)](https://github.com/mcp-tool-shop/comfy-headless)
-[![Dev Brain](https://img.shields.io/badge/Dev-Brain-10b981)](https://github.com/mcp-tool-shop/dev-brain)
+[![CID Registry Spec](https://img.shields.io/badge/CID-Registry%20Spec-22c55e)](https://mcptoolshop.com/cid-registry.html)
+[![Tool Compass](https://img.shields.io/badge/Tool-Compass-6366f1)](https://github.com/mcp-tool-shop-org/tool-compass)
+[![File Compass](https://img.shields.io/badge/File-Compass-8b5cf6)](https://github.com/mcp-tool-shop-org/file-compass)
+[![Comfy Headless](https://img.shields.io/badge/Comfy-Headless-ec4899)](https://github.com/mcp-tool-shop-org/comfy-headless)
 
-**Philosophy:** *Syntropy above all else* – Order, optimization, and production-ready solutions.
+**Website:** [mcptoolshop.com](https://mcptoolshop.com) • **Philosophy:** *Syntropy above all else*
 
 ---
 
@@ -16,6 +16,12 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
+│                    🔐 CID Registry Spec                         │
+│         Content-Addressed Tool Registry with Crypto Verify      │
+│           (24 test vectors • Ed25519 • dag-cbor CIDs)          │
+└──────────────┬──────────────────────────────────┬──────────────┘
+               │                                  │
+┌──────────────▼──────────────────────────────────▼──────────────┐
 │                      🧭 Tool Compass                            │
 │            Semantic MCP Tool Discovery Engine                   │
 │          (115+ tools • 6 backends • HNSW search)               │
@@ -44,9 +50,27 @@
 
 ## 📦 Repository Map
 
+### 🔐 **Trust & Verification**
+
+#### [CID Registry Spec](https://mcptoolshop.com/cid-registry.html)
+**Content-Addressed Tool Registry**
+- Cryptographic tool verification via CIDs
+- Ed25519 signatures with verifiable provenance
+- 24 conformance test vectors
+- Deterministic 9-step verification pipeline
+- **Status:** ✅ v0.1.1 Released • **Docs:** [Verifier Rulebook](https://mcptoolshop.com/spec/registry/v0.1.1/docs/verifier-rulebook.v0.1.md)
+
+#### [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec)
+**Formal Provenance Specification**
+- Language-neutral provenance standard
+- Cryptographic attestation chains
+- **Status:** ✅ Production • **Stack:** Spec + TypeScript reference
+
+---
+
 ### 🎯 **Discovery & Orchestration**
 
-#### [Tool Compass](https://github.com/mcp-tool-shop/tool-compass)
+#### [Tool Compass](https://github.com/mcp-tool-shop-org/tool-compass)
 **Semantic MCP Tool Discovery**
 - Find tools by intent, not memory
 - 115+ indexed tools across 6 backends
@@ -54,7 +78,7 @@
 - Tool chains and workflow detection
 - **Status:** ✅ Production • **Stack:** Python, HNSW, Ollama
 
-#### [File Compass](https://github.com/mcp-tool-shop/file-compass)
+#### [File Compass](https://github.com/mcp-tool-shop-org/file-compass)
 **Semantic File Search for AI Workstations**
 - Sub-100ms search across 10k+ file codebases
 - Project-aware context boundaries
@@ -65,7 +89,7 @@
 
 ### 🤖 **AI Generation & Inference**
 
-#### [Comfy-Headless](https://github.com/mcp-tool-shop/comfy-headless)
+#### [Comfy-Headless](https://github.com/mcp-tool-shop-org/comfy-headless)
 **Production-Ready ComfyUI Client**
 - Headless ComfyUI orchestration
 - AI-powered prompt intelligence
@@ -73,7 +97,7 @@
 - Modern Gradio UI
 - **Status:** ✅ Production • **Stack:** Python, ComfyUI, Gradio
 
-#### [Backpropagate](https://github.com/mcp-tool-shop/backpropagate)
+#### [Backpropagate](https://github.com/mcp-tool-shop-org/backpropagate)
 **Headless LLM Fine-Tuning**
 - Simple Python API with smart defaults
 - Multi-run SLAO training
@@ -85,7 +109,7 @@
 
 ### 💻 **Code Analysis & Development**
 
-#### [Dev-Brain](https://github.com/mcp-tool-shop/dev-brain)
+#### [Dev-Brain](https://github.com/mcp-tool-shop-org/dev-brain)
 **AI-Powered Code Analysis MCP**
 - Test generation (unit, integration, e2e)
 - Security audits (49 detection patterns)
@@ -93,7 +117,7 @@
 - Multi-language: Python, JS/TS, PowerShell, CSS, HTML
 - **Status:** ✅ Production • **Stack:** Python, FastMCP
 
-#### [Integradio](https://github.com/mcp-tool-shop/integradio)
+#### [Integradio](https://github.com/mcp-tool-shop-org/integradio)
 **Vector-Embedded Gradio Components**
 - Semantic codebase navigation
 - AI-native UI components
@@ -138,7 +162,7 @@ Training Data → Backpropagate (fine-tune model)
 
 ### 1. Install Tool Compass (Orchestrator)
 ```bash
-git clone https://github.com/mcp-tool-shop/tool-compass
+git clone https://github.com/mcp-tool-shop-org/tool-compass
 cd tool-compass
 pip install -e .
 ```
