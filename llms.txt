@@ -17,7 +17,7 @@ The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) server
 - Progressive disclosure pattern (compass → describe → execute)
 - Tool chains and workflow detection
 - Analytics and hot cache optimization
-- Location: https://github.com/mcp-tool-shop/tool-compass
+- Location: https://github.com/mcp-tool-shop-org/tool-compass
 
 ### File Compass  
 **Semantic File Search for AI Workstations**
@@ -25,7 +25,7 @@ The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) server
 - Sub-100ms search across large codebases
 - Project-aware context boundaries
 - Integration with Tool Compass for unified discovery
-- Location: https://github.com/mcp-tool-shop/file-compass
+- Location: https://github.com/mcp-tool-shop-org/file-compass
 
 ## AI Generation & Inference
 
@@ -36,7 +36,7 @@ The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) server
 - Video generation workflows
 - Modern Gradio UI
 - Queue management and history tracking
-- Location: https://github.com/mcp-tool-shop/comfy-headless
+- Location: https://github.com/mcp-tool-shop-org/comfy-headless
 
 ### Backpropagate
 **Headless LLM Fine-Tuning Framework**
@@ -45,7 +45,7 @@ The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) server
 - GGUF export for Ollama/llama.cpp
 - Full Windows + WSL2 support
 - Production-grade error handling
-- Location: https://github.com/mcp-tool-shop/backpropagate
+- Location: https://github.com/mcp-tool-shop-org/backpropagate
 
 ## Code Analysis & Development
 
@@ -56,14 +56,14 @@ The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) server
 - Refactoring suggestions
 - Code health scoring (49 detection patterns)
 - Multi-language support (Python, JS/TS, PowerShell, CSS, HTML)
-- Location: https://github.com/mcp-tool-shop/dev-brain
+- Location: https://github.com/mcp-tool-shop-org/dev-brain
 
 ### Integradio
 **Vector-Embedded Gradio Components**
 - Semantic codebase navigation
 - AI-native UI components
 - Context-aware search in Gradio interfaces
-- Location: https://github.com/mcp-tool-shop/integradio
+- Location: https://github.com/mcp-tool-shop-org/integradio
 
 ## Architecture Principles
 
@@ -133,7 +133,7 @@ All repositories follow:
 
 ## Community & Support
 
-- Organization: https://github.com/mcp-tool-shop
+- Organization: https://github.com/mcp-tool-shop-org
 - Issues: Individual repo issue trackers
 - Philosophy: Syntropy above all else
 
@@ -143,6 +143,6 @@ Each repository has its own license - check individual repos for details.
 
 ---
 
-*Last Updated: 2026-01-24*
-*Total Repositories: 14*
-*Active MCP Servers: 6*
+*Last Updated: 2026-02-14*
+*Total Repositories: 32*
+*Active MCP Servers: 8*
