@@ -12,7 +12,7 @@ jobs:
   markdownlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Markdown lint
         uses: davidanson/markdownlint-cli2-action@v17
         with:
@@ -22,7 +22,7 @@ jobs:
   link-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Link check (lychee)
         uses: lycheeverse/lychee-action@v2
         with:
