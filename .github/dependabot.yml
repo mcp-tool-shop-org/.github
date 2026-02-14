@@ -1,0 +1,21 @@
+# Org-wide Dependabot configuration
+# Inherited by all repos in mcp-tool-shop-org that don't define their own.
+#
+# Scope: GitHub Actions only. Ecosystem deps (npm/pip/NuGet) are managed
+# per-repo to avoid PR noise. Actions updates are low-volume, high-value
+# (security patches, runner compatibility).
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    open-pull-requests-limit: 5
