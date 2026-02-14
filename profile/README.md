@@ -16,7 +16,10 @@
 
 ## What We Build
 
-MCP servers, desktop tools, and AI infrastructure that run on **your hardware**. No cloud dependencies. No API keys for core functionality. Designed for developers with local GPU workstations who want AI-assisted workflows without vendor lock-in.
+MCP servers, desktop tools, and AI infrastructure that run on **your hardware**.
+No cloud dependencies. No API keys for core functionality.
+Designed for developers with local GPU workstations who want
+AI-assisted workflows without vendor lock-in.
 
 **Core stack:** MCP · Ollama · HNSW · FastMCP · .NET MAUI · WinUI 3
 
@@ -24,7 +27,7 @@ MCP servers, desktop tools, and AI infrastructure that run on **your hardware**.
 
 ## Ecosystem
 
-```
+```text
                        ┌──────────────────────┐
                        │   Claude Code / Any   │
                        │     MCP Client        │
@@ -390,7 +393,7 @@ brew tap mcp-tool-shop-org/mcp-tools
 | | |
 |---|---|
 | **Local-first** | Everything runs on your machine. No cloud required. |
-| **MCP-native** | Tools compose through the Model Context Protocol. Works with Claude, Cursor, VS Code, any MCP client. |
+| **MCP-native** | Tools compose through MCP. Works with Claude, Cursor, VS Code, any MCP client. |
 | **Windows-first** | Full Windows support. MAUI and WinUI 3 desktop apps. RTX 5080 / Blackwell optimized. |
 | **Append-only** | Ledgers, event journals, and journey engines that never lose history. |
 | **Production-grade** | CI/CD, tests, error handling, security hardening, semantic versioning. |
