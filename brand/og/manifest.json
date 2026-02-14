@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "description": "Maps each repo to its social preview image and tagline. Images are in ../previews/.",
+  "repos": {
+    "InControl-Desktop": {
+      "image": "InControl-Desktop.png",
+      "display_name": "InControl",
+      "tagline": "Privacy-first local LLM chat for Windows",
+      "lang": "C#",
+      "frame": "WinUI 3"
+    },
+    "Attestia-Desktop": {
+      "image": "Attestia-Desktop.png",
+      "display_name": "Attestia Desktop",
+      "tagline": "Financial intent verification for Windows",
+      "lang": "C#",
+      "frame": "WinUI 3"
+    },
+    "ThrottleAI-Desktop": {
+      "image": "ThrottleAI-Desktop.png",
+      "display_name": "ThrottleAI",
+      "tagline": "Visual control surface for AI lease governance",
+      "lang": "C#",
+      "frame": "MAUI"
+    },
+    "mcp-voice-soundboard": {
+      "image": "mcp-voice-soundboard.png",
+      "display_name": "Voice Soundboard",
+      "tagline": "Text-to-speech MCP server for AI agents",
+      "lang": "TS",
+      "frame": "MCP"
+    },
+    "mcp-voice-engine": {
+      "image": "mcp-voice-engine.png",
+      "display_name": "Voice Engine",
+      "tagline": "Streaming TTS inference backend",
+      "lang": "TS",
+      "frame": "Kokoro"
+    },
+    "ConsensusOS": {
+      "image": "ConsensusOS.png",
+      "display_name": "ConsensusOS",
+      "tagline": "Multi-chain consensus control plane",
+      "lang": "Python",
+      "frame": "FastAPI"
+    },
+    "code-batch": {
+      "image": "code-batch.png",
+      "display_name": "CodeBatch",
+      "tagline": "Content-addressed batch execution engine",
+      "lang": "Python",
+      "frame": "CLI"
+    },
+    "tool-scan": {
+      "image": "tool-scan.png",
+      "display_name": "Tool Scan",
+      "tagline": "Security scanner for MCP tools",
+      "lang": "Python",
+      "frame": "MCP"
+    },
+    "file-compass": {
+      "image": "file-compass.png",
+      "display_name": "File Compass",
+      "tagline": "Semantic file search with HNSW indexing",
+      "lang": "Python",
+      "frame": "MCP"
+    },
+    "tool-compass": {
+      "image": "tool-compass.png",
+      "display_name": "Tool Compass",
+      "tagline": "Semantic MCP tool discovery by intent",
+      "lang": "Python",
+      "frame": "MCP"
+    },
+    "backpropagate": {
+      "image": "backpropagate.png",
+      "display_name": "Backpropagate",
+      "tagline": "Headless LLM fine-tuning with smart defaults",
+      "lang": "Python",
+      "frame": "PyTorch"
+    },
+    "headless-wheel-builder": {
+      "image": "headless-wheel-builder.png",
+      "display_name": "Wheel Builder",
+      "tagline": "Universal headless Python wheel builder",
+      "lang": "Python",
+      "frame": "Docker"
+    }
+  }
+}
