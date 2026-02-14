@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1280" height="640" fill="url(#grid)"/>
+  </g>
+
+  <!-- Accent bar (top) -->
+  <rect x="0" y="0" width="1280" height="4" fill="url(#accent)"/>
+
+  <!-- Logo mark area (geometric toolbox icon) -->
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="#3b82f6" opacity="0.9"/>
+    <rect x="8" y="8" width="12" height="12" rx="2" fill="#0f172a"/>
+    <rect x="28" y="8" width="12" height="12" rx="2" fill="#0f172a"/>
+    <rect x="8" y="28" width="12" height="12" rx="2" fill="#0f172a"/>
+    <rect x="28" y="28" width="12" height="12" rx="2" fill="#0f172a"/>
+  </g>
+
+  <!-- REPO_NAME (replace per repo) -->
+  <text x="80" y="300" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="56" font-weight="700" fill="#f8fafc" letter-spacing="-1">
+    REPO_NAME
+  </text>
+
+  <!-- ONE_LINER (replace per repo) -->
+  <text x="80" y="360" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#94a3b8">
+    ONE_LINER_HERE
+  </text>
+
+  <!-- Tech badges (replace per repo) -->
+  <g transform="translate(80, 400)">
+    <!-- BADGE_1 -->
+    <rect x="0" y="0" width="90" height="32" rx="6" fill="#1e3a5f"/>
+    <text x="45" y="21" font-family="'Segoe UI', monospace" font-size="14" font-weight="600" fill="#60a5fa" text-anchor="middle">LANG</text>
+    <!-- BADGE_2 -->
+    <rect x="100" y="0" width="90" height="32" rx="6" fill="#1e3a5f"/>
+    <text x="145" y="21" font-family="'Segoe UI', monospace" font-size="14" font-weight="600" fill="#60a5fa" text-anchor="middle">FRAME</text>
+  </g>
+
+  <!-- Footer: org name -->
+  <text x="80" y="580" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="500" fill="#475569">
+    mcp-tool-shop-org
+  </text>
+
+  <!-- Footer: accent dot -->
+  <circle cx="258" cy="575" r="3" fill="#3b82f6"/>
+
+  <!-- Footer: tagline -->
+  <text x="272" y="580" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="400" fill="#475569">
+    ML + Tooling for Windows
+  </text>
+</svg>
