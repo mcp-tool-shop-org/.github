@@ -127,10 +127,150 @@ jobs:
         shell: bash
         run: |
           echo "=== Checking release policy docs ==="
-          for doc in docs/RELEASING.md docs/VERSIONING.md docs/MAINTENANCE.md; do
+          for doc in docs/RELEASING.md docs/VERSIONING.md docs/MAINTENANCE.md docs/BRANCH_POLICY.md docs/BADGES.md; do
             if [ ! -f "$doc" ]; then
               echo "::warning::Missing release doc: $doc"
             else
               echo "OK: $doc exists"
             fi
           done
+
+  check-org-repos:
+    name: Check Org Repos (Cross-Repo)
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Scan repos for master branch references
+        shell: bash
+        run: |
+          echo "=== Scanning org repos for master branch regressions ==="
+          violations=0
+
+          # Get non-archived repos
+          repos=$(gh api orgs/mcp-tool-shop-org/repos --paginate \
+            --jq '.[] | select(.archived == false) | .name' | sort)
+
+          for repo in $repos; do
+            # Check if master branch still exists
+            if gh api "repos/mcp-tool-shop-org/$repo/branches/master" --jq '.name' 2>/dev/null | grep -q master; then
+              default=$(gh api "repos/mcp-tool-shop-org/$repo" --jq '.default_branch' 2>/dev/null)
+              if [ "$default" = "master" ]; then
+                echo "::error::$repo — default branch is still 'master'"
+              else
+                echo "::warning::$repo — stale 'master' branch exists alongside '$default'"
+              fi
+              violations=$((violations + 1))
+            fi
+          done
+
+          echo "---"
+          if [ "$violations" -gt 0 ]; then
+            echo "::warning::Found $violations repo(s) with master branch issues"
+          else
+            echo "All repos use 'main' — no master branches found"
+          fi
+
+      - name: Scan README badges for master references
+        shell: bash
+        run: |
+          echo "=== Scanning README badges for branch=master ==="
+          violations=0
+
+          repos=$(gh api orgs/mcp-tool-shop-org/repos --paginate \
+            --jq '.[] | select(.archived == false) | .name' | sort)
+
+          for repo in $repos; do
+            readme=$(gh api "repos/mcp-tool-shop-org/$repo/contents/README.md" \
+              --jq '.content' 2>/dev/null | base64 -d 2>/dev/null)
+            [ -z "$readme" ] && continue
+
+            if echo "$readme" | grep -qiE 'branch=master|/master/'; then
+              echo "::warning::$repo — README contains master branch reference in badge or URL"
+              violations=$((violations + 1))
+            fi
+          done
+
+          echo "---"
+          if [ "$violations" -gt 0 ]; then
+            echo "::warning::Found $violations repo(s) with master references in READMEs"
+          else
+            echo "All README badges use 'main'"
+          fi
+
+      - name: Scan workflows for master triggers
+        shell: bash
+        run: |
+          echo "=== Scanning workflows for master branch triggers ==="
+          violations=0
+
+          repos=$(gh api orgs/mcp-tool-shop-org/repos --paginate \
+            --jq '.[] | select(.archived == false) | .name' | sort)
+
+          for repo in $repos; do
+            files=$(gh api "repos/mcp-tool-shop-org/$repo/contents/.github/workflows" \
+              --jq '.[].name' 2>/dev/null)
+            [ -z "$files" ] && continue
+
+            for f in $files; do
+              content=$(gh api "repos/mcp-tool-shop-org/$repo/contents/.github/workflows/$f" \
+                --jq '.content' 2>/dev/null | base64 -d 2>/dev/null)
+              [ -z "$content" ] && continue
+
+              if echo "$content" | grep -qE 'branches:.*master'; then
+                echo "::warning::$repo/.github/workflows/$f — workflow triggers on 'master'"
+                violations=$((violations + 1))
+              fi
+            done
+          done
+
+          echo "---"
+          if [ "$violations" -gt 0 ]; then
+            echo "::warning::Found $violations workflow(s) triggering on master"
+          else
+            echo "All workflows trigger on 'main' only"
+          fi
+
+      - name: Check action version floors across org
+        shell: bash
+        run: |
+          echo "=== Checking action version floors across org ==="
+          violations=0
+
+          repos=$(gh api orgs/mcp-tool-shop-org/repos --paginate \
+            --jq '.[] | select(.archived == false) | .name' | sort)
+
+          for repo in $repos; do
+            files=$(gh api "repos/mcp-tool-shop-org/$repo/contents/.github/workflows" \
+              --jq '.[].name' 2>/dev/null)
+            [ -z "$files" ] && continue
+
+            for f in $files; do
+              content=$(gh api "repos/mcp-tool-shop-org/$repo/contents/.github/workflows/$f" \
+                --jq '.content' 2>/dev/null | base64 -d 2>/dev/null)
+              [ -z "$content" ] && continue
+
+              if echo "$content" | grep -qE 'codecov/codecov-action@v[1-4]'; then
+                echo "::warning::$repo/$f — codecov-action below v5"
+                violations=$((violations + 1))
+              fi
+
+              if echo "$content" | grep -qE 'actions/setup-python@v[1-5]'; then
+                echo "::warning::$repo/$f — setup-python below v6"
+                violations=$((violations + 1))
+              fi
+
+              if echo "$content" | grep -qE '@master\b'; then
+                echo "::warning::$repo/$f — action pinned to @master (supply chain risk)"
+                violations=$((violations + 1))
+              fi
+            done
+          done
+
+          echo "---"
+          if [ "$violations" -gt 0 ]; then
+            echo "::warning::Found $violations action version floor violation(s)"
+          else
+            echo "All actions meet version floors"
+          fi
