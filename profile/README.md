@@ -1,315 +1,420 @@
-# 🛠️ MCP Tool Shop
+<div align="center">
 
-> **Production-grade MCP servers for the agentic future**
-> Semantic search • Code analysis • AI orchestration • Verifiable provenance
+# MCP Tool Shop
 
-[![CID Registry Spec](https://img.shields.io/badge/CID-Registry%20Spec-22c55e)](https://mcptoolshop.com/cid-registry.html)
-[![Tool Compass](https://img.shields.io/badge/Tool-Compass-6366f1)](https://github.com/mcp-tool-shop-org/tool-compass)
-[![File Compass](https://img.shields.io/badge/File-Compass-8b5cf6)](https://github.com/mcp-tool-shop-org/file-compass)
-[![Comfy Headless](https://img.shields.io/badge/Comfy-Headless-ec4899)](https://github.com/mcp-tool-shop-org/comfy-headless)
+**Production-grade MCP servers and AI tooling for local-first development**
 
-**Website:** [mcptoolshop.com](https://mcptoolshop.com) • **Philosophy:** *Syntropy above all else*
+[![Website](https://img.shields.io/badge/mcptoolshop.com-222?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mcptoolshop.com)
 
----
+99 repositories · 8 languages · Windows-first
 
-## 🌐 Ecosystem Architecture
+*Syntropy above all else*
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    🔐 CID Registry Spec                         │
-│         Content-Addressed Tool Registry with Crypto Verify      │
-│           (24 test vectors • Ed25519 • dag-cbor CIDs)          │
-└──────────────┬──────────────────────────────────┬──────────────┘
-               │                                  │
-┌──────────────▼──────────────────────────────────▼──────────────┐
-│                      🧭 Tool Compass                            │
-│            Semantic MCP Tool Discovery Engine                   │
-│          (115+ tools • 6 backends • HNSW search)               │
-└──────────────┬──────────────────────────────────┬──────────────┘
-               │                                  │
-    ┌──────────▼──────────┐          ┌──────────▼──────────┐
-    │  📁 File Compass    │          │  🧠 Dev-Brain       │
-    │  Semantic File      │          │  Code Analysis      │
-    │  Search Engine      │          │  & Health Scoring   │
-    └─────────────────────┘          └─────────────────────┘
-               │                                  │
-    ┌──────────▼──────────┐          ┌──────────▼──────────┐
-    │  🎨 Comfy-Headless  │          │  🔬 Backpropagate   │
-    │  AI Image/Video     │          │  LLM Fine-Tuning    │
-    │  Generation         │          │  Framework          │
-    └─────────────────────┘          └─────────────────────┘
-               │
-    ┌──────────▼──────────┐
-    │  🎛️ Integradio      │
-    │  Vector-Embedded    │
-    │  UI Components      │
-    └─────────────────────┘
-```
+</div>
 
 ---
 
-## 📦 Repository Map
+## What We Build
 
-### 🔐 **Trust & Verification**
+MCP servers, desktop tools, and AI infrastructure that run on **your hardware**. No cloud dependencies. No API keys for core functionality. Designed for developers with local GPU workstations who want AI-assisted workflows without vendor lock-in.
 
-#### [CID Registry Spec](https://mcptoolshop.com/cid-registry.html)
-**Content-Addressed Tool Registry**
-- Cryptographic tool verification via CIDs
-- Ed25519 signatures with verifiable provenance
-- 24 conformance test vectors
-- Deterministic 9-step verification pipeline
-- **Status:** ✅ v0.1.1 Released • **Docs:** [Verifier Rulebook](https://mcptoolshop.com/spec/registry/v0.1.1/docs/verifier-rulebook.v0.1.md)
-
-#### [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec)
-**Formal Provenance Specification**
-- Language-neutral provenance standard
-- Cryptographic attestation chains
-- **Status:** ✅ Production • **Stack:** Spec + TypeScript reference
+**Core stack:** MCP · Ollama · HNSW · FastMCP · .NET MAUI · WinUI 3
 
 ---
 
-### 🎯 **Discovery & Orchestration**
+## Ecosystem
 
-#### [Tool Compass](https://github.com/mcp-tool-shop-org/tool-compass)
-**Semantic MCP Tool Discovery**
-- Find tools by intent, not memory
-- 115+ indexed tools across 6 backends
-- Progressive disclosure: `compass() → describe() → execute()`
-- Tool chains and workflow detection
-- **Status:** ✅ Production • **Stack:** Python, HNSW, Ollama
-
-#### [File Compass](https://github.com/mcp-tool-shop-org/file-compass)
-**Semantic File Search for AI Workstations**
-- Sub-100ms search across 10k+ file codebases
-- Project-aware context boundaries
-- Integrates with Tool Compass
-- **Status:** ✅ Production • **Stack:** Python, HNSW, Ollama
-
----
-
-### 🤖 **AI Generation & Inference**
-
-#### [Comfy-Headless](https://github.com/mcp-tool-shop-org/comfy-headless)
-**Production-Ready ComfyUI Client**
-- Headless ComfyUI orchestration
-- AI-powered prompt intelligence
-- Video generation workflows
-- Modern Gradio UI
-- **Status:** ✅ Production • **Stack:** Python, ComfyUI, Gradio
-
-#### [Backpropagate](https://github.com/mcp-tool-shop-org/backpropagate)
-**Headless LLM Fine-Tuning**
-- Simple Python API with smart defaults
-- Multi-run SLAO training
-- GGUF export for Ollama/llama.cpp
-- Full Windows + WSL2 support
-- **Status:** ✅ Production • **Stack:** Python, Hugging Face
-
----
-
-### 💻 **Code Analysis & Development**
-
-#### [Dev-Brain](https://github.com/mcp-tool-shop-org/dev-brain)
-**AI-Powered Code Analysis MCP**
-- Test generation (unit, integration, e2e)
-- Security audits (49 detection patterns)
-- Code health scoring across 11 categories
-- Multi-language: Python, JS/TS, PowerShell, CSS, HTML
-- **Status:** ✅ Production • **Stack:** Python, FastMCP
-
-#### [Integradio](https://github.com/mcp-tool-shop-org/integradio)
-**Vector-Embedded Gradio Components**
-- Semantic codebase navigation
-- AI-native UI components
-- Context-aware search
-- **Status:** 🚧 Active Development • **Stack:** Python, Gradio
-
----
-
-## 🔗 Tool Integration Patterns
-
-### Pattern 1: **Semantic Code Discovery**
 ```
-User Query → Tool Compass (find relevant tools)
-           → File Compass (locate implementation)
-           → Dev-Brain (analyze code health)
-```
-
-### Pattern 2: **AI-Assisted Development**
-```
-Code Changes → Dev-Brain (security audit + tests)
-            → File Compass (find related files)
-            → Tool Compass (suggest refactoring tools)
-```
-
-### Pattern 3: **Multimodal Asset Generation**
-```
-Text Prompt → Comfy-Headless (generate image/video)
-           → Tool Compass (find post-processing tools)
-           → File Compass (store in asset library)
-```
-
-### Pattern 4: **Model Customization**
-```
-Training Data → Backpropagate (fine-tune model)
-             → Tool Compass (deploy to inference)
-             → Dev-Brain (validate outputs)
+                       ┌──────────────────────┐
+                       │   Claude Code / Any   │
+                       │     MCP Client        │
+                       └──────────┬───────────┘
+                                  │ MCP Protocol
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+     ┌────────▼───────┐ ┌────────▼───────┐ ┌────────▼───────┐
+     │ Tool Compass   │ │ File Compass   │ │ Brain-Dev      │
+     │ discover tools │ │ search files   │ │ analyze code   │
+     └────────────────┘ └────────────────┘ └────────────────┘
+              │                   │                   │
+     ┌────────▼───────┐ ┌────────▼───────┐ ┌────────▼───────┐
+     │ Comfy-Headless │ │ Backpropagate  │ │ Voice Engine   │
+     │ image/video    │ │ fine-tuning    │ │ TTS + speech   │
+     └────────────────┘ └────────────────┘ └────────────────┘
+              │                   │                   │
+              └───────────────────┼───────────────────┘
+                                  │
+                       ┌──────────▼───────────┐
+                       │   Local Hardware      │
+                       │  Ollama · CUDA · RTX  │
+                       └──────────────────────┘
 ```
 
 ---
 
-## 🚀 Quick Start
+## Flagship MCP Servers
 
-### 1. Install Tool Compass (Orchestrator)
+<table>
+<tr>
+<td width="50%">
+
+**[Tool Compass](https://github.com/mcp-tool-shop-org/tool-compass)** · Python
+<br>Semantic MCP tool discovery — find tools by describing what you need.
+<br>`compass() → describe() → execute()`
+<br>115+ tools · 6 backends · HNSW search
+
+</td>
+<td width="50%">
+
+**[File Compass](https://github.com/mcp-tool-shop-org/file-compass)** · Python
+<br>Semantic file search with HNSW indexing and local embeddings.
+<br>Multi-language AST chunking · JSON/YAML key splitting
+<br><100ms search · 10K+ files · 402 tests
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[Brain-Dev](https://github.com/mcp-tool-shop-org/brain-dev)** · Python
+<br>AI-powered code analysis — test generation, security audits (49 patterns), code health scoring across 11 categories.
+
+</td>
+<td width="50%">
+
+**[Context Window Manager](https://github.com/mcp-tool-shop-org/context-window-manager)** · Python
+<br>Lossless LLM context restoration via KV cache persistence.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[MCP Voice Soundboard](https://github.com/mcp-tool-shop-org/mcp-voice-soundboard)** · Python
+<br>TTS MCP server for AI agents — 12 voices, emotion spans, SSML-lite, multi-speaker dialogue, SFX tags, guardrails.
+
+</td>
+<td width="50%">
+
+**[MCP File Forge](https://github.com/mcp-tool-shop-org/mcp-file-forge)** · TypeScript
+<br>File operations and project scaffolding — Windows-first, secure, sandboxed.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[WebSketch MCP](https://github.com/mcp-tool-shop-org/websketch-mcp)** · JavaScript
+<br>Expose WebSketch IR tools for LLM agents — grammar-based UI representation.
+
+</td>
+<td width="50%">
+
+**[Stresskit MCP](https://github.com/mcp-tool-shop-org/stresskit-mcp)** · Python
+<br>MCP server health and security testing — trustable evidence for server readiness.
+
+</td>
+</tr>
+</table>
+
+---
+
+## AI Generation & Training
+
+<table>
+<tr>
+<td width="50%">
+
+**[Comfy-Headless](https://github.com/mcp-tool-shop-org/comfy-headless)** · Python
+<br>Production-ready headless ComfyUI client with AI-powered prompt intelligence, video generation, and Gradio UI.
+
+</td>
+<td width="50%">
+
+**[Backpropagate](https://github.com/mcp-tool-shop-org/backpropagate)** · Python
+<br>Headless LLM fine-tuning. Smart defaults, multi-run SLAO training, GGUF export for Ollama/llama.cpp. Full Windows support.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[Audiobooker](https://github.com/mcp-tool-shop-org/audiobooker)** · Python
+<br>Convert EPUB/TXT books into professionally narrated audiobooks using multi-voice synthesis.
+
+</td>
+<td width="50%">
+
+**[ASPIRE-AI](https://github.com/mcp-tool-shop-org/aspire-ai)** · Python
+<br>Adversarial Student-Professor Internalized Reasoning Engine — teaching AI through internalized mentorship.
+
+</td>
+</tr>
+</table>
+
+---
+
+## Voice & Speech
+
+<table>
+<tr>
+<td width="33%">
+
+**[Soundboard Plugin](https://github.com/mcp-tool-shop-org/soundboard-plugin)** · Python
+<br>Give Claude Code a voice. Emotion-aware speech, dialogue, narration.
+
+</td>
+<td width="33%">
+
+**[MCP Voice Engine](https://github.com/mcp-tool-shop-org/mcp-voice-engine)** · TypeScript
+<br>Core voice synthesis engine.
+
+</td>
+<td width="33%">
+
+**[Soundboard MAUI](https://github.com/mcp-tool-shop-org/soundboard-maui)** · C#
+<br>Cross-platform .NET MAUI desktop client.
+
+</td>
+</tr>
+</table>
+
+---
+
+## Code Quality & Security
+
+<table>
+<tr>
+<td width="50%">
+
+**[Code-Covered](https://github.com/mcp-tool-shop-org/code-covered)** · Python
+<br>Find coverage gaps and generate missing tests.
+
+</td>
+<td width="50%">
+
+**[Tool-Scan](https://github.com/mcp-tool-shop-org/tool-scan)** · Python
+<br>Security scanner for MCP tools.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[CodeClone Suite](https://github.com/mcp-tool-shop-org/codeclone-suite)** · TypeScript
+<br>Deterministic code coverage analysis as a protocol.
+
+</td>
+<td width="50%">
+
+**[MCP Stress Test](https://github.com/mcp-tool-shop-org/mcp-stress-test)** · Python
+<br>Red team toolkit for stress-testing MCP security scanners.
+
+</td>
+</tr>
+</table>
+
+---
+
+## Accessibility
+
+<table>
+<tr>
+<td width="33%">
+
+**[A11y-Lint](https://github.com/mcp-tool-shop-org/a11y-lint)** · Python
+<br>CLI output linter for accessible error patterns.
+
+</td>
+<td width="33%">
+
+**[A11y-Evidence-Engine](https://github.com/mcp-tool-shop-org/a11y-evidence-engine)** · JavaScript
+<br>Headless accessibility evidence with provenance.
+
+</td>
+<td width="33%">
+
+**[A11y-CI](https://github.com/mcp-tool-shop-org/a11y-ci)** · Python
+<br>CI gate for accessibility scorecards.
+
+</td>
+</tr>
+</table>
+
+---
+
+## Windows Desktop Apps
+
+<table>
+<tr>
+<td width="50%">
+
+**[InControl-Desktop](https://github.com/mcp-tool-shop-org/InControl-Desktop)** · C# / WinUI 3
+<br>Local AI inference dashboard.
+
+</td>
+<td width="50%">
+
+**[LeaseGate-Lite](https://github.com/mcp-tool-shop-org/LeaseGate-Lite)** · C# / MAUI
+<br>Throttle AI workloads on Windows. Smoother calls, less stutter.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[Attestia-Desktop](https://github.com/mcp-tool-shop-org/Attestia-Desktop)** · C# / MAUI
+<br>Financial truth infrastructure for Windows.
+
+</td>
+<td width="50%">
+
+**[NextGallery-Desktop](https://github.com/mcp-tool-shop-org/NextGallery-Desktop)** · C#
+<br>Gallery for AI-generated images and videos.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[ScalarScope-Desktop](https://github.com/mcp-tool-shop-org/ScalarScope-Desktop)** · C# / MAUI
+<br>ASPIRE training dynamics visualizer.
+
+</td>
+<td width="50%">
+
+**[Build-Governor](https://github.com/mcp-tool-shop-org/build-governor)** · C#
+<br>Prevents build system memory exhaustion on Windows.
+
+</td>
+</tr>
+</table>
+
+---
+
+## VS Code Extensions
+
+| Extension | Description |
+|-----------|-------------|
+| **[CodeComfy VS Code](https://github.com/mcp-tool-shop-org/codecomfy-vscode)** | Run ComfyUI workflows from VS Code |
+| **[RunForge VS Code](https://github.com/mcp-tool-shop-org/runforge-vscode)** | Push-button ML training with presets |
+| **[MCP App Builder](https://github.com/mcp-tool-shop-org/mcp-app-builder)** | Build MCP servers with interactive UI |
+| **[WebSketch Extension](https://github.com/mcp-tool-shop-org/websketch-extension)** | Capture web pages as WebSketch IR |
+
+---
+
+## Infrastructure & Governance
+
+<table>
+<tr>
+<td width="50%">
+
+**[Nexus Suite](https://github.com/mcp-tool-shop-org/nexus-suite)** · Python
+<br>Governance, attestation, and routing for MCP tool ecosystems.
+
+</td>
+<td width="50%">
+
+**[ThrottleAI](https://github.com/mcp-tool-shop-org/ThrottleAI)** · TypeScript
+<br>Token-based lease governor for AI calls.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[Attestia](https://github.com/mcp-tool-shop-org/Attestia)** · TypeScript
+<br>Financial truth infrastructure — deterministic accounting across chains.
+
+</td>
+<td width="50%">
+
+**[Prov-Spec](https://github.com/mcp-tool-shop-org/prov-spec)** · Python
+<br>Language-neutral specification for verifiable provenance.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**[Witness](https://github.com/mcp-tool-shop-org/witness)** · Python
+<br>Append-only event journal for human-AI work. Cryptographically verifiable.
+
+</td>
+<td width="50%">
+
+**[Registrum](https://github.com/mcp-tool-shop-org/Registrum)** · TypeScript
+<br>Structural registrar for maintaining legibility in evolving systems.
+
+</td>
+</tr>
+</table>
+
+---
+
+## WebSketch IR
+
+Grammar-based UI representation for LLMs — capture web pages as semantic primitives.
+
+| Repo | Description |
+|------|-------------|
+| **[websketch-ir](https://github.com/mcp-tool-shop-org/websketch-ir)** | Core grammar and TypeScript SDK |
+| **[websketch-mcp](https://github.com/mcp-tool-shop-org/websketch-mcp)** | MCP server for LLM agents |
+| **[websketch-cli](https://github.com/mcp-tool-shop-org/websketch-cli)** | CLI — render, fingerprint, diff |
+| **[websketch-extension](https://github.com/mcp-tool-shop-org/websketch-extension)** | Chrome extension |
+| **[websketch-demo](https://github.com/mcp-tool-shop-org/websketch-demo)** | Interactive demo site |
+
+---
+
+## CLI Tools & Distribution
+
 ```bash
-git clone https://github.com/mcp-tool-shop-org/tool-compass
-cd tool-compass
-pip install -e .
+# mcpt — discover and run MCP Tool Shop tools
+pip install mcpt && mcpt search "semantic file search"
+
+# Homebrew
+brew tap mcp-tool-shop-org/mcp-tools
 ```
 
-### 2. Configure Your Backends
-```json
-{
-  "mcpServers": {
-    "tool-compass": {
-      "command": "python",
-      "args": ["-m", "tool_compass"]
-    }
-  }
-}
-```
-
-### 3. Discover Tools by Intent
-```python
-# Natural language tool discovery
-tools = compass("semantic file search")
-# Returns: file-compass, integradio, etc.
-```
+| Tool | Description |
+|------|-------------|
+| **[mcpt](https://github.com/mcp-tool-shop-org/mcpt)** | CLI for discovering and running MCP Tool Shop tools |
+| **[headless-wheel-builder](https://github.com/mcp-tool-shop-org/headless-wheel-builder)** | Universal headless Python wheel builder |
+| **[homebrew-mcp-tools](https://github.com/mcp-tool-shop-org/homebrew-mcp-tools)** | Official Homebrew tap |
+| **[venvkit](https://github.com/mcp-tool-shop-org/venvkit)** | Python venv diagnostic toolkit for Windows ML workflows |
 
 ---
 
-## 🏗️ Architecture Principles
+## Principles
 
-| Principle | Implementation |
-|-----------|----------------|
-| **Local-First** | All tools run on local infrastructure (RTX 5080 optimized) |
-| **Semantic Search** | HNSW + Ollama embeddings across all layers |
-| **Production-Ready** | Error handling, logging, analytics, monitoring |
-| **Modular Design** | Tools compose via MCP protocol |
-| **FastMCP Framework** | Built on modern Python MCP SDK |
-
----
-
-## 📊 Performance Characteristics
-
-| Tool | Operation | Latency | Scale |
-|------|-----------|---------|-------|
-| Tool Compass | Tool discovery | <20ms | 115+ tools |
-| File Compass | File search | <100ms | 10k+ files |
-| Comfy-Headless | Image generation | 2-3x speedup | TensorRT |
-| Dev-Brain | Code scan | ~50ms/file | 49 patterns |
+| | |
+|---|---|
+| **Local-first** | Everything runs on your machine. No cloud required. |
+| **MCP-native** | Tools compose through the Model Context Protocol. Works with Claude, Cursor, VS Code, any MCP client. |
+| **Windows-first** | Full Windows support. MAUI and WinUI 3 desktop apps. RTX 5080 / Blackwell optimized. |
+| **Append-only** | Ledgers, event journals, and journey engines that never lose history. |
+| **Production-grade** | CI/CD, tests, error handling, security hardening, semantic versioning. |
+| **Accessible** | Low-vision-first CLI output. WCAG compliance tooling. Accessibility baked in. |
 
 ---
 
-## 🛠️ Technology Stack
+## By the Numbers
 
-**Core Technologies:**
-- Model Context Protocol (MCP)
-- FastMCP (Python MCP SDK)
-- HNSW (hnswlib) for vector search
-- Ollama (nomic-embed-text embeddings)
+<div align="center">
 
-**AI Infrastructure:**
-- ComfyUI (image/video generation)
-- TensorRT (inference optimization)
-- vLLM (LLM serving)
-- Hugging Face (model training)
+| | |
+|:---:|:---:|
+| **99** repos | **39** Python · **25** C# · **18** TypeScript |
+| **8+** MCP servers | **11** desktop apps & extensions |
+| **5** accessibility tools | **5** WebSketch modules |
 
-**Frameworks:**
-- Gradio (web UIs)
-- FastAPI (REST APIs)
-- SQLite + ChromaDB (persistence)
-
----
-
-## 📚 Documentation Standards
-
-All repositories include:
-- ✅ Comprehensive README with quickstart
-- ✅ `llms.txt` for AI context (GitMCP compatible)
-- ✅ Semantic versioning with Git tags
-- ✅ GitHub Actions CI/CD
-- ✅ Production-grade error handling
-- ✅ API/tool reference documentation
-
----
-
-## 🎯 Use Cases
-
-**For AI Agents:**
-- Discover and orchestrate 115+ tools by intent
-- Navigate codebases semantically, not textually
-- Generate test suites and security audits automatically
-- Create visual assets on-demand
-
-**For Developers:**
-- Reference architecture for production MCP servers
-- Integrate semantic search into applications
-- Fine-tune models for specific domains
-- Automate code quality workflows
-
----
-
-## 🌟 Featured Integrations
-
-- **Claude Desktop** - Native MCP client
-- **VS Code** - via MCP extension
-- **Cursor** - AI-native code editor
-- **Windsurf** - Cloud development
-- **Custom Clients** - Any MCP-compatible tool
-
----
-
-## 📈 Roadmap
-
-- [ ] MCP Registry submissions for all servers
-- [ ] Cross-tool workflow automation
-- [ ] Distributed context mesh (CID-based addressing)
-- [ ] Enhanced analytics and observability
-- [ ] Community server templates
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Each repository has its own contribution guidelines. General principles:
-
-1. **Syntropy first** - Systematic, production-ready solutions
-2. **Comprehensive docs** - READMEs, llms.txt, API references
-3. **Error handling** - No silent failures
-4. **Tests** - Unit, integration, e2e where applicable
-5. **Semantic versioning** - Tag releases properly
-
----
-
-## 📞 Support & Community
-
-- **Organization**: [@mcp-tool-shop](https://github.com/mcp-tool-shop)
-- **Issues**: Use individual repository issue trackers
-- **Discussions**: Coming soon
-- **Philosophy**: [Syntropy Manifesto](./SYNTROPY.md) *(planned)*
-
----
-
-## 📄 License
-
-Each repository maintains its own license. Check individual repos for details.
+</div>
 
 ---
 
 <div align="center">
 
-**Built with 🧠 by developers, for AI agents**
+**[mcptoolshop.com](https://mcptoolshop.com)** · **[All Repositories](https://github.com/orgs/mcp-tool-shop-org/repositories)**
 
 *Syntropy above all else*
 
