@@ -24,11 +24,9 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >
+            --config lychee.toml
             --verbose
             --no-progress
-            --accept 200,429
-            --timeout 20
-            --max-concurrency 8
             **/*.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
