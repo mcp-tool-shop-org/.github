@@ -6,9 +6,7 @@
 
 [![Website](https://img.shields.io/badge/mcptoolshop.com-222?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mcptoolshop.com)
 
-99 repositories · 8 languages · Windows-first
 
-*Syntropy above all else*
 
 </div>
 
