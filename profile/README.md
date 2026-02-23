@@ -6,7 +6,6 @@
 
 [![Website](https://img.shields.io/badge/mcptoolshop.com-222?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mcptoolshop.com)
 
-
 </div>
 
 ---
