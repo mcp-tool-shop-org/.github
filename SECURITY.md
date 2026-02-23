@@ -11,7 +11,9 @@ If you're unsure whether a repo is supported, report it anyway.
 Please report security issues **privately**.
 
 - Preferred: GitHub **Private Vulnerability Reporting** (if enabled on the affected repo)
-- Otherwise: open a [private security advisory](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/creating-a-repository-security-advisory) on the affected repo
+- Otherwise: open a [private security advisory][gh-advisory] on the affected repo
+
+[gh-advisory]: https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/creating-a-repository-security-advisory
 
 Include:
 

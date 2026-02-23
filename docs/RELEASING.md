@@ -10,7 +10,7 @@ How to ship a release for any MCP Tool Shop repo.
 
 ## Release Flow
 
-```
+```text
 1. Update CHANGELOG.md  (move Unreleased → vX.Y.Z)
 2. Bump version in manifest
 3. Commit: "release: vX.Y.Z"
@@ -21,7 +21,8 @@ How to ship a release for any MCP Tool Shop repo.
 
 ### Step by Step
 
-1. **Update CHANGELOG.md** — Move everything under `## Unreleased` into a new `## X.Y.Z - YYYY-MM-DD` section. Add a link diff at the bottom.
+1. **Update CHANGELOG.md** — Move everything under `## Unreleased`
+   into a new `## X.Y.Z - YYYY-MM-DD` section. Add a link diff at the bottom.
 
 2. **Bump version** — Update the version string in the canonical manifest:
    - Python: `pyproject.toml` → `[project] version`
@@ -51,6 +52,7 @@ If a release is broken:
 ## Pre-release Versions
 
 Use SemVer pre-release suffixes:
+
 - `1.0.0-alpha` → early development
 - `1.0.0-beta` → feature-complete, testing
 - `1.0.0-rc.1` → release candidate

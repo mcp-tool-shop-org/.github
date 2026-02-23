@@ -33,6 +33,7 @@ No artifacts are built or published from developer machines.
 **Current stance:** Not yet implemented.
 
 Planned:
+
 - [ ] Sigstore/cosign for container images
 - [ ] npm provenance (`--provenance` flag in publish workflow)
 - [ ] PyPI Trusted Publishers (already using OIDC where available)
@@ -42,6 +43,7 @@ Planned:
 **Current stance:** Not yet generated.
 
 Planned:
+
 - [ ] `syft` or `trivy` SBOM generation in release workflows
 - [ ] Attach SBOM as release artifact (SPDX or CycloneDX format)
 - [ ] Container SBOM via `docker sbom` or build-time generation
@@ -56,9 +58,12 @@ Planned:
 ## Trusted Publishers
 
 Repos that use PyPI Trusted Publishers (OIDC, no API token):
+
 - Configured per-repo in PyPI project settings
 - Publish workflow uses `pypa/gh-action-pypi-publish` with `permissions: id-token: write`
 
 ## Reporting Issues
 
-If you find a supply chain concern (compromised dependency, unexpected artifact contents, signing mismatch), report it via [SECURITY.md](../SECURITY.md).
+If you find a supply chain concern (compromised dependency,
+unexpected artifact contents, signing mismatch),
+report it via [SECURITY.md](../SECURITY.md).

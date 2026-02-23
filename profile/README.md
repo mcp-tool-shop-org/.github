@@ -7,7 +7,6 @@
 [![Website](https://img.shields.io/badge/mcptoolshop.com-222?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mcptoolshop.com)
 
 
-
 </div>
 
 ---
@@ -268,14 +267,6 @@ AI-assisted workflows without vendor lock-in.
 <br>Financial truth infrastructure for Windows.
 
 </td>
-<td width="50%">
-
-**[NextGallery-Desktop](https://github.com/mcp-tool-shop-org/NextGallery-Desktop)** · C#
-<br>Gallery for AI-generated images and videos.
-
-</td>
-</tr>
-<tr>
 <td width="50%">
 
 **[ScalarScope-Desktop](https://github.com/mcp-tool-shop-org/ScalarScope-Desktop)** · C# / MAUI

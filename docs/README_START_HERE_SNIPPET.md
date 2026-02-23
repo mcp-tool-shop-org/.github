@@ -1,6 +1,7 @@
 # README "Start Here" Snippet
 
-Copy-paste this block into the top of any product repo's README, right after the badges and one-liner tagline. Replace the placeholders.
+Copy-paste this block into the top of any product repo's README,
+right after the badges and one-liner tagline. Replace the placeholders.
 
 ---
 

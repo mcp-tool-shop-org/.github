@@ -52,6 +52,7 @@ If a branch is deleted by mistake:
   the repo's branch list → "Restore" button, or use the
   [Events API](https://docs.github.com/en/rest/activity/events).
 - **After 90 days:** Recreate from the last known tag or `main`:
+
   ```bash
   git checkout -b BRANCH v1.2.3   # from tag
   git checkout -b BRANCH main     # from current main

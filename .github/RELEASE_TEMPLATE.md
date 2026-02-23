@@ -18,6 +18,6 @@ _None._
 
 <!-- For binary releases: SHA256 of each artifact -->
 
-```
+```text
 sha256  filename.ext
 ```

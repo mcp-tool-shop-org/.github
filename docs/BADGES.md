@@ -4,7 +4,7 @@
 
 All badges use **`flat-square`** via shields.io. No other styles.
 
-```
+```text
 ?style=flat-square
 ```
 
@@ -28,6 +28,7 @@ and before the repo title or description.
 5. **License**
 
 Optional, after the standard set:
+
 - GitHub stars (social style)
 - Docker-ready badge (if applicable)
 - Downloads badge (if published)

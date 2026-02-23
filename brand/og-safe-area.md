@@ -1,6 +1,8 @@
 # OG Image Safe Area Guide
 
-GitHub crops social preview images differently across surfaces (repo page, link previews, Twitter cards, Slack unfurls). This guide defines the safe area.
+GitHub crops social preview images differently across surfaces
+(repo page, link previews, Twitter cards, Slack unfurls).
+This guide defines the safe area.
 
 ## Canvas
 
@@ -9,7 +11,7 @@ GitHub crops social preview images differently across surfaces (repo page, link 
 
 ## Safe Area
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │ 4px accent bar                                    │
 ├──────────────────────────────────────────────────┤

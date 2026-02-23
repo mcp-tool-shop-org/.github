@@ -4,7 +4,7 @@ All MCP Tool Shop repos follow [Semantic Versioning 2.0.0](https://semver.org/).
 
 ## Format
 
-```
+```text
 MAJOR.MINOR.PATCH[-PRERELEASE]
 ```
 

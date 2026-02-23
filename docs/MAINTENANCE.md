@@ -13,7 +13,8 @@ Actively developed. Bug fixes, features, and security patches.
 - Issues get triaged within a week
 - Discussions are monitored
 
-**Repos:** InControl-Desktop, mcp-voice-soundboard, mcp-voice-engine, tool-compass, file-compass, tool-scan, code-batch, backpropagate
+**Repos:** InControl-Desktop, mcp-voice-soundboard, mcp-voice-engine,
+tool-compass, file-compass, tool-scan, code-batch, backpropagate
 
 ### Beta
 
