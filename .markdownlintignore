@@ -1,0 +1,4 @@
+# README files contain long badge/nav HTML lines that can't be shortened.
+# Community health files (CONTRIBUTING, CODE_OF_CONDUCT, etc.) are linted.
+README.md
+README.*.md
