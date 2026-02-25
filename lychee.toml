@@ -1,7 +1,6 @@
 # Local usage:
 #   lychee --config lychee.toml **/*.md
 
-exclude_mail = true
 accept = [200, 429]
 timeout = 20
 max_concurrency = 8
@@ -9,4 +8,5 @@ max_concurrency = 8
 # Exclude domains with known SSL/DNS issues
 exclude = [
   "mcptoolshop\\.com",  # SSL hostname mismatch — domain config pending
+  "^mailto:",
 ]
