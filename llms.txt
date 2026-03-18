@@ -143,6 +143,6 @@ Each repository has its own license - check individual repos for details.
 
 ---
 
-*Last Updated: 2026-02-14*
-*Total Repositories: 32*
+*Last Updated: 2026-03-18*
+*Total Repositories: 99*
 *Active MCP Servers: 8*
