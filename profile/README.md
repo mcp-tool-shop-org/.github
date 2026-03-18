@@ -353,25 +353,15 @@ Grammar-based UI representation for LLMs — capture web pages as semantic primi
 | **[websketch-mcp](https://github.com/mcp-tool-shop-org/websketch-mcp)** | MCP server for LLM agents |
 | **[websketch-cli](https://github.com/mcp-tool-shop-org/websketch-cli)** | CLI — render, fingerprint, diff |
 | **[websketch-extension](https://github.com/mcp-tool-shop-org/websketch-extension)** | Chrome extension |
-| **[websketch-demo](https://github.com/mcp-tool-shop-org/websketch-demo)** | Interactive demo site |
 
 ---
 
 ## CLI Tools & Distribution
 
-```bash
-# mcpt — discover and run MCP Tool Shop tools
-pip install mcpt && mcpt search "semantic file search"
-
-# Homebrew
-brew tap mcp-tool-shop-org/mcp-tools
-```
 
 | Tool | Description |
 |------|-------------|
-| **[mcpt](https://github.com/mcp-tool-shop-org/mcpt)** | CLI for discovering and running MCP Tool Shop tools |
 | **[headless-wheel-builder](https://github.com/mcp-tool-shop-org/headless-wheel-builder)** | Universal headless Python wheel builder |
-| **[homebrew-mcp-tools](https://github.com/mcp-tool-shop-org/homebrew-mcp-tools)** | Official Homebrew tap |
 | **[venvkit](https://github.com/mcp-tool-shop-org/venvkit)** | Python venv diagnostic toolkit for Windows ML workflows |
 
 ---
