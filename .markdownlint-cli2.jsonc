@@ -1,0 +1,7 @@
+{
+  "ignores": [
+    "README.md",
+    "README.*.md",
+    "profile/README.md"
+  ]
+}
