@@ -2,6 +2,13 @@
 
 Thanks for helping improve MCP Tool Shop.
 
+## Where to ask
+
+- **Questions, setup help, troubleshooting** — [Discussions Q&A](https://github.com/orgs/mcp-tool-shop-org/discussions/categories/q-a)
+- **Feature ideas and proposals** — [Discussions Ideas](https://github.com/orgs/mcp-tool-shop-org/discussions/categories/ideas)
+- **Bugs with repro steps** — open an Issue in the relevant repo
+- **Show off what you built** — [Discussions Show & Tell](https://github.com/orgs/mcp-tool-shop-org/discussions/categories/show-and-tell)
+
 ## Quick start
 
 - Keep changes focused and small.

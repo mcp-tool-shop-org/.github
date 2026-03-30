@@ -21,3 +21,7 @@ _None._
 ```text
 sha256  filename.ext
 ```
+
+---
+
+Questions or ideas? [Join Discussions](https://github.com/orgs/mcp-tool-shop-org/discussions)

@@ -366,6 +366,13 @@ Grammar-based UI representation for LLMs — capture web pages as semantic primi
 
 ---
 
+## Community
+
+Questions, ideas, or something you built? **[Join Discussions](https://github.com/orgs/mcp-tool-shop-org/discussions)**
+Bugs and reproducible defects go in [Issues](https://github.com/orgs/mcp-tool-shop-org/repositories) on the relevant repo.
+
+---
+
 ## Principles
 
 | | |

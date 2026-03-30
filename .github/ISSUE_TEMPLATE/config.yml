@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Questions & setup help
+    url: https://github.com/orgs/mcp-tool-shop-org/discussions/categories/q-a
+    about: Usage questions, troubleshooting, and setup help — post in Discussions.
+  - name: Feature ideas
+    url: https://github.com/orgs/mcp-tool-shop-org/discussions/categories/ideas
+    about: Feature requests and integration ideas — start in Discussions so others can weigh in.
   - name: Security issues
     url: https://github.com/mcp-tool-shop-org/.github/security/policy
     about: Please report vulnerabilities privately.
