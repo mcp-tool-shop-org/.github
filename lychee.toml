@@ -9,4 +9,5 @@ max_concurrency = 8
 exclude = [
   "mcptoolshop\\.com",  # SSL hostname mismatch — domain config pending
   "^mailto:",
+  "codeclone-suite",  # repo renamed/private — pending README cleanup
 ]
