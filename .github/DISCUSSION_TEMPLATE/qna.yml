@@ -1,0 +1,38 @@
+title: "Q&A: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      placeholder: Describe your goal clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Which tool/repo is involved?
+      placeholder: Name or link the relevant tool or repo.
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What happened?
+      placeholder: Error messages, unexpected behavior, etc.
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce / example input
+
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment details
+      placeholder: OS, versions, configs, etc.

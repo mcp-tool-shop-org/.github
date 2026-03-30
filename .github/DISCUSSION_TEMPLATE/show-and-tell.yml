@@ -1,0 +1,29 @@
+title: "Show & Tell: "
+labels: ["showcase"]
+body:
+  - type: textarea
+    id: project
+    attributes:
+      label: What did you build?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tools
+    attributes:
+      label: Which tools did you use?
+
+  - type: textarea
+    id: demo
+    attributes:
+      label: Demo / screenshots / repo links
+
+  - type: textarea
+    id: wins
+    attributes:
+      label: What worked well?
+
+  - type: textarea
+    id: challenges
+    attributes:
+      label: What was hard?
