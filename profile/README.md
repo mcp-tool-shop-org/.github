@@ -17,7 +17,6 @@ No cloud dependencies. No API keys for core functionality.
 Designed for developers with local GPU workstations who want
 AI-assisted workflows without vendor lock-in.
 
-**Core stack:** MCP · Ollama · HNSW · FastMCP · .NET MAUI · WinUI 3
 
 ---
 
