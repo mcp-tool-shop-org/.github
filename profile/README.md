@@ -2,7 +2,7 @@
 
 # MCP Tool Shop
 
-**Production-grade MCP servers and AI tooling for local-first development**
+**Games, Production-grade MCP servers and AI tooling for local-first development**
 
 [![Website](https://img.shields.io/badge/mcptoolshop.com-222?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mcptoolshop.com)
 
