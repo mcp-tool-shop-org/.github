@@ -1,112 +1,112 @@
 import type { SiteConfig } from '@mcptoolshop/site-theme';
 
+const ORG = 'https://github.com/mcp-tool-shop-org';
+
 export const config: SiteConfig = {
   title: 'MCP Tool Shop',
-  description: 'Production-grade MCP servers, desktop apps, and AI infrastructure — built for developers with local GPU workstations. No cloud required.',
-  logoBadge: 'MT',
+  description:
+    'Open-source tooling for local-first AI development: MCP servers, command-line tools, training and dataset pipelines, and game-production tooling that run on your own hardware.',
+  logoBadge: 'M',
   brandName: 'MCP Tool Shop',
-  repoUrl: 'https://github.com/mcp-tool-shop-org',
-  footerText: 'MIT Licensed — <a href="https://github.com/mcp-tool-shop-org" style="color:var(--color-muted);text-decoration:underline">mcp-tool-shop-org</a>',
+  repoUrl: ORG,
+  npmUrl: 'https://www.npmjs.com/search?q=%40mcptoolshop',
+  footerText:
+    'MIT Licensed — <a href="https://mcptoolshop.com" style="color:var(--color-muted);text-decoration:underline">mcptoolshop.com</a> · <a href="https://github.com/mcp-tool-shop-org" style="color:var(--color-muted);text-decoration:underline">mcp-tool-shop-org</a>',
 
   hero: {
-    badge: 'Open Source · Local-First',
-    headline: 'AI tooling that runs',
-    headlineAccent: 'on your machine.',
-    description: 'Production-grade MCP servers, desktop apps, and AI infrastructure for developers with local GPU workstations. No cloud dependencies. No API keys for core functionality. Runs on Ollama, RTX, and your own hardware.',
-    primaryCta: { href: 'https://github.com/orgs/mcp-tool-shop-org/repositories', label: 'Browse all tools' },
-    secondaryCta: { href: '#tools', label: 'Flagship tools' },
+    badge: 'Open source · MIT · Local-first',
+    headline: 'Tooling for local-first',
+    headlineAccent: 'AI development.',
+    description:
+      'MCP servers, command-line tools, training and dataset pipelines, and game-production tooling from an independent studio. Built to run on your own hardware: a workstation GPU, Ollama, ComfyUI, and the Model Context Protocol. No API key or hosted service is required for core functionality.',
+    primaryCta: { href: 'https://mcptoolshop.com/tools/', label: 'Browse the catalog' },
+    secondaryCta: { href: '#areas', label: 'Areas of work' },
     previews: [
       {
-        label: 'Discover tools',
-        code: '# mcpt — discover and run MCP Tool Shop tools\npip install mcpt\n\nmcpt search "semantic file search"\n# → file-compass · HNSW · multi-language AST\n\nmcpt search "typing practice developer"\n# → dev-op-typer · WinUI 3 · adaptive Elo\n\nmcpt info tool-compass\n# → 115+ tools · 6 backends · local embeddings',
+        label: 'Install',
+        code: '# Find MCP tools by describing what you need\nnpx @mcptoolshop/tool-compass\n\n# Drive ComfyUI from Python, no node canvas\npip install comfy-headless\n\n# Fine-tune a local model, export GGUF for Ollama\npip install backpropagate\n\n# Run the release gate on your own repo\nnpx @mcptoolshop/shipcheck audit',
       },
       {
-        label: 'Use with Claude',
-        code: '# Add to claude_desktop_config.json:\n{\n  "mcpServers": {\n    "tool-compass": {\n      "command": "uvx",\n      "args": ["tool-compass"]\n    },\n    "file-compass": {\n      "command": "uvx",\n      "args": ["file-compass", "--root", "/your/project"]\n    },\n    "brain-dev": {\n      "command": "uvx",\n      "args": ["brain-dev"]\n    }\n  }\n}',
+        label: 'Use with an MCP client',
+        code: '// Claude Code, Claude Desktop, Cursor, VS Code\n{\n  "mcpServers": {\n    "tool-compass": {\n      "command": "npx",\n      "args": ["-y", "@mcptoolshop/tool-compass"]\n    },\n    "ollama-intern": {\n      "command": "npx",\n      "args": ["-y", "ollama-intern-mcp"]\n    }\n  }\n}',
       },
       {
-        label: 'Homebrew',
-        code: '# Official Homebrew tap\nbrew tap mcp-tool-shop-org/mcp-tools\n\nbrew install tool-compass\nbrew install file-compass\nbrew install brain-dev\n\n# Or discover everything\npip install mcpt && mcpt search "."',
+        label: 'Ship a release',
+        code: '# Copy the Ship Gate checklist and templates\nnpx @mcptoolshop/shipcheck init\n\n# Work through SHIP_GATE.md, then audit\nnpx @mcptoolshop/shipcheck audit\n# exit 0 = every hard gate passes:\n#   security policy + threat model\n#   structured errors + exit codes\n#   current docs + changelog\n#   clean packaging',
       },
     ],
   },
 
   sections: [
     {
-      kind: 'features',
-      id: 'what-we-build',
-      title: 'Built for the agentic era',
-      subtitle: 'Everything runs on your hardware. MCP-native from day one.',
-      features: [
-        {
-          title: 'MCP servers',
-          desc: '8+ production-grade MCP servers. Tool discovery, semantic file search, code analysis, voice synthesis, WebSketch IR, file operations, and more. Drop them into Claude Code, Cursor, or any MCP client.',
-        },
-        {
-          title: 'Windows desktop apps',
-          desc: '11+ desktop apps and VS Code extensions. WinUI 3 and .NET MAUI — native Windows experiences for AI inference, budgeting, training dynamics, typing practice, and voice. RTX 5080 / Blackwell optimized.',
-        },
-        {
-          title: 'AI generation & training',
-          desc: 'Headless ComfyUI client, LLM fine-tuning with GGUF export, audiobook generation from EPUB. All local. No subscription. Your GPU, your data, your models.',
-        },
+      kind: 'data-table',
+      id: 'areas',
+      title: 'Areas of work',
+      subtitle: 'About 80 public repositories, developed in the open. The full catalog with install commands and release history is at mcptoolshop.com/tools.',
+      columns: ['Area', 'Repositories', 'What they do'],
+      rows: [
+        ['MCP servers', 'tool-compass · ollama-intern-mcp · mcp-voice-soundboard · polyglot-mcp · plain-sight', 'Tool discovery by intent, local-model job delegation, text-to-speech, GPU translation, image description'],
+        ['Training and datasets', 'backpropagate · style-dataset-lab · repo-dataset · backprop-trace · runforge-vscode', 'Headless fine-tuning with GGUF export, canon-bound visual datasets, contamination-checked code datasets, training-step verification'],
+        ['Image and media pipelines', 'comfy-headless · comfy-preflight · sprite-foundry · armature · audiobooker', 'Programmatic ComfyUI, pre-submission workflow gates, sprite generation, GLB-driven video, multi-voice audiobooks'],
+        ['Agent infrastructure', 'role-os · loadout-os · prism-verify · claude-guardian · research-os', 'Multi-agent orchestration, context routing, cross-family output verification, runtime health, research control plane'],
+        ['Developer tooling', 'shipcheck · site-theme · repo-knowledge · registry-stats · npm-launcher', 'Release quality gates, Astro site templates, repo knowledge base, package download stats, verified binary launcher'],
+        ['Games and game tooling', 'ai-rpg-engine · world-forge · motif · saints-mile · roll', 'Deterministic RPG simulation, 2D/2.5D world authoring, adaptive soundtracks, a frontier JRPG, dice and probability engine'],
+        ['Ledger and verification', 'attestia · xrpl-lab · xrpl-camp · repomesh', 'Financial truth infrastructure, XRPL training, release verification for repo networks'],
       ],
     },
     {
-      kind: 'data-table',
-      id: 'tools',
-      title: 'Flagship tools by category',
-      subtitle: '99 repos across MCP servers, desktop apps, AI tooling, and developer infrastructure.',
-      columns: ['Category', 'Key Tools', 'Stack'],
-      rows: [
-        ['MCP Servers', 'Tool Compass · File Compass · Brain-Dev · WebSketch MCP · MCP Voice Soundboard', 'Python · TypeScript'],
-        ['Desktop Apps', 'Dev-Op-Typer · NextLedger · ScalarScope · InControl · Attestia', 'C# · WinUI 3 · MAUI'],
-        ['AI Generation', 'Comfy-Headless · Backpropagate · Audiobooker · ASPIRE-AI', 'Python · CUDA'],
-        ['VS Code Extensions', 'CodeComfy · RunForge · MCP App Builder · WebSketch Extension', 'TypeScript'],
-        ['Accessibility', 'A11y-Lint · A11y-Evidence-Engine · A11y-CI', 'Python · JavaScript'],
-        ['Infrastructure', 'Nexus Suite · Attestia · Witness · ThrottleAI · Prov-Spec', 'Python · TypeScript'],
+      kind: 'features',
+      id: 'how-we-ship',
+      title: 'How we ship',
+      subtitle: 'The same standards apply to every repository in the organization.',
+      features: [
+        {
+          title: 'Local-first',
+          desc: 'Core functionality never requires an API key or a hosted service. Where a tool offers cloud routing, it is opt-in and falls back to local execution. No telemetry.',
+        },
+        {
+          title: 'MCP-native',
+          desc: 'Tools compose through the Model Context Protocol rather than vendor SDKs. Servers work with Claude Code, Claude Desktop, Cursor, VS Code, and any other MCP client.',
+        },
+        {
+          title: 'Gated releases',
+          desc: 'Every tagged release passes the shipcheck gate: security policy and threat model, structured errors with exit codes, current docs and changelog, clean packaging. Semantic versioning; published to npm or PyPI from CI.',
+        },
+        {
+          title: 'Documented in eight languages',
+          desc: 'Most repositories ship READMEs in English, Japanese, Chinese, Spanish, French, Hindi, Italian, and Brazilian Portuguese, translated locally with polyglot-mcp.',
+        },
+        {
+          title: 'Accessible by default',
+          desc: 'Low-vision-first CLI output and WCAG tooling from accessibility-suite, built in rather than bolted on.',
+        },
+        {
+          title: 'Three lanes',
+          desc: 'Every README states its lane. Shipped: tagged releases, CI, an install command. In development: active, pre-1.0, APIs may change. Archive: retired prototypes kept in the prototypes repository.',
+        },
       ],
     },
     {
       kind: 'code-cards',
-      id: 'get-started',
-      title: 'Get started',
+      id: 'this-repo',
+      title: 'What lives in this repository',
+      subtitle: 'The .github repository carries the organization-wide files that every other repo inherits.',
       cards: [
         {
-          title: 'Discover tools',
-          code: 'pip install mcpt\n\n# Search by what you need\nmcpt search "semantic code search"\nmcpt search "voice synthesis mcp"\nmcpt search "budget windows app"\n\n# Get details on any tool\nmcpt info file-compass',
+          title: 'Community health files',
+          code: 'CODE_OF_CONDUCT.md\nCONTRIBUTING.md\nSECURITY.md      # private vulnerability reporting\nSUPPORT.md       # what to include in a bug report\nLICENSE          # MIT\n\n.github/ISSUE_TEMPLATE/\n.github/DISCUSSION_TEMPLATE/\n.github/pull_request_template.md',
         },
         {
-          title: 'Add MCP servers',
-          code: '# Quickest way — uvx (no install needed)\n# Works in Claude Code, Cursor, VS Code\n\n{\n  "mcpServers": {\n    "tool-compass": {\n      "command": "uvx",\n      "args": ["tool-compass"]\n    }\n  }\n}',
+          title: 'Org docs',
+          code: 'docs/RELEASING.md      # tag, publish, announce\ndocs/VERSIONING.md     # semantic versioning policy\ndocs/BRANCH_POLICY.md  # main is protected\ndocs/MAINTENANCE.md    # what "maintained" means\ndocs/BADGES.md         # README badge standards\ndocs/PROVENANCE.md     # build provenance',
         },
         {
-          title: 'WebSketch IR',
-          code: '# Capture any web page as LLM-readable IR\nnpm install -g websketch-cli\n\n# Render a page to semantic primitives\nwebsketch render https://example.com\n\n# Use via MCP server\nnpx websketch-mcp',
+          title: 'Brand kit',
+          code: 'brand/palette.md            # color system\nbrand/README.md             # typography, tone, naming\nbrand/og/manifest.json      # social-preview copy per repo\nbrand/social-preview-template.svg\nbrand/generate-previews.py  # 1280x640 OG images',
         },
         {
           title: 'Community',
-          code: '# Community health files live here:\n#   CODE_OF_CONDUCT.md\n#   CONTRIBUTING.md\n#   SECURITY.md\n#   SUPPORT.md\n#\n# Report issues on individual repos.\n# Org-wide discussions:\n# github.com/orgs/mcp-tool-shop-org/discussions',
-        },
-      ],
-    },
-    {
-      kind: 'features',
-      id: 'principles',
-      title: 'Principles',
-      subtitle: 'Every tool in the org is built to these standards.',
-      features: [
-        {
-          title: 'Local-first',
-          desc: 'Everything runs on your machine. No cloud required. No telemetry. Designed for RTX / Blackwell workstations — Ollama, CUDA, and local embeddings are first-class citizens.',
-        },
-        {
-          title: 'MCP-native',
-          desc: 'Tools compose through the Model Context Protocol. Works with Claude Code, Cursor, VS Code, and any MCP client. The protocol is the interface — not a vendor SDK.',
-        },
-        {
-          title: 'Production-grade',
-          desc: 'CI/CD on every repo. Tests, error handling, security hardening, semantic versioning. Accessibility baked in. WCAG compliance tooling. Low-vision-first CLI output. Both names are on every commit.',
+          code: '# Questions and ideas\ngithub.com/orgs/mcp-tool-shop-org/discussions\n\n# Bugs and feature requests\n# -> Issues on the relevant repository\n\n# Security\n# -> private vulnerability reporting, never a public issue',
         },
       ],
     },

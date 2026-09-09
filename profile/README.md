@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/mcp-tool-shop-org/.github/main/assets/mark.svg" alt="" width="88" height="88">
+
 # MCP Tool Shop
 
 **Open-source tooling for local-first AI development.**
