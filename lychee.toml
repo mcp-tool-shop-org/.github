@@ -7,6 +7,7 @@ max_concurrency = 8
 
 # Exclude domains with known SSL/DNS issues
 exclude = [
+  "^https://www\.npmjs\.com",  # npm serves 403 to non-browser clients; package existence is verified by CI publish jobs
   "mcptoolshop\\.com",  # SSL hostname mismatch — domain config pending
   "^mailto:",
   "codeclone-suite",  # repo renamed/private — pending README cleanup

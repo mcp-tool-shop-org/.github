@@ -1,148 +1,80 @@
-# MCP Tool Shop - AI-Native Development Toolkit
+# MCP Tool Shop
 
-> Production-grade MCP servers for semantic search, code analysis, AI orchestration, and multimodal generation
+> Open-source tooling for local-first AI development: MCP servers, command-line tools, training and dataset pipelines, and game-production tooling that run on your own hardware. MIT licensed.
 
-## Overview
+Organization: https://github.com/mcp-tool-shop-org
+Website and tool catalog: https://mcptoolshop.com
+npm scope: https://www.npmjs.com/search?q=%40mcptoolshop (packages are published as `@mcptoolshop/<name>`)
+Support policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SUPPORT.md
+Security policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SECURITY.md
 
-The MCP Tool Shop is a curated collection of Model Context Protocol (MCP) servers designed for local AI infrastructure. Each tool is built for production use with comprehensive error handling, semantic search capabilities, and modular architecture.
+## What the organization is
 
-**Philosophy:** Syntropy above all else - systematic optimization, order, and production-ready solutions over quick fixes.
+MCP Tool Shop is an independent software studio. It builds the tools it uses to develop AI-assisted software and games, and publishes them as open source. Core functionality never requires an API key or a hosted service; tools run on a workstation GPU with Ollama, ComfyUI, and the Model Context Protocol (MCP). Optional cloud routing, where it exists, is opt-in with local fallback.
 
-## Core Infrastructure
+## Areas of work
 
-### Tool Compass
-**Semantic MCP Tool Discovery & Orchestration**
-- 115+ indexed tools across 6 backend servers
-- HNSW-based semantic search with Ollama embeddings
-- Progressive disclosure pattern (compass → describe → execute)
-- Tool chains and workflow detection
-- Analytics and hot cache optimization
-- Location: https://github.com/mcp-tool-shop-org/tool-compass
+### MCP servers
+- tool-compass: semantic MCP tool discovery; find tools by intent. `npx @mcptoolshop/tool-compass` or `pip install tool-compass`. https://github.com/mcp-tool-shop-org/tool-compass
+- ollama-intern-mcp: delegate bulk analysis to a local Ollama model from Claude Code; 42 job-shaped tools with durable artifacts. `npx ollama-intern-mcp`. https://github.com/mcp-tool-shop-org/ollama-intern-mcp
+- mcp-voice-soundboard: text-to-speech MCP server; 48 voices, 9 languages, SSML-lite, multi-speaker dialogue. https://github.com/mcp-tool-shop-org/mcp-voice-soundboard
+- polyglot-mcp: local GPU translation MCP server (TranslateGemma via Ollama, 55 languages). https://github.com/mcp-tool-shop-org/polyglot-mcp
+- plain-sight: image description MCP server and CLI (Florence-2, local). https://github.com/mcp-tool-shop-org/plain-sight
 
-### File Compass  
-**Semantic File Search for AI Workstations**
-- HNSW indexing with local embeddings (Ollama)
-- Sub-100ms search across large codebases
-- Project-aware context boundaries
-- Integration with Tool Compass for unified discovery
-- Location: https://github.com/mcp-tool-shop-org/file-compass
+### Training and datasets
+- backpropagate: headless LLM fine-tuning with VRAM-aware defaults and GGUF export. `pip install backpropagate`. https://github.com/mcp-tool-shop-org/backpropagate
+- style-dataset-lab: canon-aligned visual dataset production: snapshots, splits, training packages, eval scorecards. https://github.com/mcp-tool-shop-org/style-dataset-lab
+- repo-dataset: contamination-checked training datasets from code and visual repos. https://github.com/mcp-tool-shop-org/repo-dataset
+- backprop-trace: deterministic verifier for neural-network training steps. https://github.com/mcp-tool-shop-org/backprop-trace
 
-## AI Generation & Inference
+### Image and media pipelines
+- comfy-headless: drive ComfyUI from Python; builds and runs API-format graphs for image, video, 3D, and audio. `pip install comfy-headless`. https://github.com/mcp-tool-shop-org/comfy-headless
+- comfy-preflight: a gate that halts a ComfyUI submission that would produce a known-wrong result. https://github.com/mcp-tool-shop-org/comfy-preflight
+- sprite-foundry: headless sprite generation pipeline (ComfyUI + SQLite + Godot finish lab). https://github.com/mcp-tool-shop-org/sprite-foundry
+- armature: GLB-authored previz and control sequences for image-to-video models. https://github.com/mcp-tool-shop-org/armature
+- audiobooker: EPUB/TXT/PDF/DOCX to multi-voice narrated audiobooks. https://github.com/mcp-tool-shop-org/audiobooker
 
-### Comfy-Headless
-**Production ComfyUI Client with AI Prompt Intelligence**
-- Headless ComfyUI orchestration
-- AI-powered prompt enhancement
-- Video generation workflows
-- Modern Gradio UI
-- Queue management and history tracking
-- Location: https://github.com/mcp-tool-shop-org/comfy-headless
+### Agent infrastructure
+- role-os: multi-Claude orchestration: 61 roles, team packs, missions, structured evidence. https://github.com/mcp-tool-shop-org/role-os
+- loadout-os: routes the right memories and rules to a coding agent on demand. https://github.com/mcp-tool-shop-org/loadout-os
+- prism-verify: runtime LLM verifier; family-different, reasoning-stripped, signed receipts. https://github.com/mcp-tool-shop-org/prism-verify
+- claude-guardian: log rotation, watchdog, crash bundles, and MCP self-awareness for Claude Code. https://github.com/mcp-tool-shop-org/claude-guardian
+- research-os: local-first research control plane with gated source packs and claim truth. https://github.com/mcp-tool-shop-org/research-os
 
-### Backpropagate
-**Headless LLM Fine-Tuning Framework**
-- Simple Python API with smart defaults
-- Multi-run SLAO training
-- GGUF export for Ollama/llama.cpp
-- Full Windows + WSL2 support
-- Production-grade error handling
-- Location: https://github.com/mcp-tool-shop-org/backpropagate
+### Developer tooling
+- shipcheck: release quality gate: Ship Gate checklist, error contract, templates. `npx @mcptoolshop/shipcheck audit`. https://github.com/mcp-tool-shop-org/shipcheck
+- site-theme: multi-template Astro toolkit for landing pages and docs. https://github.com/mcp-tool-shop-org/site-theme
+- repo-knowledge: relational repo catalog with full-text search and MCP access. https://github.com/mcp-tool-shop-org/repo-knowledge
+- registry-stats: download stats across npm, PyPI, NuGet, VS Code Marketplace, and Docker Hub. https://github.com/mcp-tool-shop-org/registry-stats
+- npm-launcher: GitHub-release binary launcher with cache and SHA256 verification. https://github.com/mcp-tool-shop-org/npm-launcher
 
-## Code Analysis & Development
+### Games and game tooling
+- ai-rpg-engine: simulation-native toolkit for deterministic RPG worlds. https://github.com/mcp-tool-shop-org/ai-rpg-engine
+- world-forge: 2D/2.5D world authoring with export lanes for AI RPG Engine, Unreal Engine 5, and Godot 4. https://github.com/mcp-tool-shop-org/world-forge
+- motif: adaptive soundtrack studio for interactive game music. https://github.com/mcp-tool-shop-org/motif
+- saints-mile: a frontier JRPG for the terminal. https://github.com/mcp-tool-shop-org/saints-mile
+- roll: RPG dice engine with probability analysis and loot tables. https://github.com/mcp-tool-shop-org/roll
 
-### Dev-Brain
-**AI-Powered Code Analysis MCP Server**
-- Test generation (unit, integration, e2e)
-- Security audits and vulnerability detection
-- Refactoring suggestions
-- Code health scoring (49 detection patterns)
-- Multi-language support (Python, JS/TS, PowerShell, CSS, HTML)
-- Location: https://github.com/mcp-tool-shop-org/dev-brain
+### Ledger and verification
+- attestia: financial truth infrastructure for decentralized systems. https://github.com/mcp-tool-shop-org/attestia
+- xrpl-lab: XRPL training workbook; learn by doing, prove by artifact. https://github.com/mcp-tool-shop-org/xrpl-lab
+- xrpl-camp: learn the XRP Ledger in one sitting with real transactions. https://github.com/mcp-tool-shop-org/xrpl-camp
+- repomesh: verify releases and anchors across repo networks. https://github.com/mcp-tool-shop-org/repomesh
 
-### Integradio
-**Vector-Embedded Gradio Components**
-- Semantic codebase navigation
-- AI-native UI components
-- Context-aware search in Gradio interfaces
-- Location: https://github.com/mcp-tool-shop-org/integradio
+## Engineering standards
 
-## Architecture Principles
+- Every tagged release passes the shipcheck gate: security policy and threat model, structured errors with exit codes, current documentation and changelog, clean packaging.
+- Semantic versioning; releases are tagged on GitHub and published to npm or PyPI from CI.
+- CI on ubuntu-latest, path-filtered, with concurrency groups; no telemetry in any tool.
+- Most repositories ship READMEs in English, Japanese, Chinese, Spanish, French, Hindi, Italian, and Brazilian Portuguese.
+- Each repository states its lane: Shipped (tagged releases, CI, install command), In development (active, pre-1.0), or Archive (kept in the prototypes repository).
 
-1. **Local-First**: All tools run on local infrastructure (RTX 5080 optimized)
-2. **Semantic Search**: HNSW + Ollama embeddings across all discovery layers
-3. **Production-Ready**: Comprehensive error handling, logging, analytics
-4. **Modular Design**: Tools compose together via MCP protocol
-5. **FastMCP Framework**: Built on modern Python MCP SDK
+## Technology
 
-## Technology Stack
+Python, TypeScript, Rust, C#, GDScript (Godot 4), Astro. Runtimes and protocols: MCP, Ollama, ComfyUI, SQLite, CUDA. Developed on Windows with NVIDIA hardware; most tools are cross-platform.
 
-- **MCP Protocol**: Model Context Protocol for tool interop
-- **Embeddings**: Ollama (nomic-embed-text)
-- **Vector Search**: HNSW (hnswlib)
-- **Frameworks**: FastMCP, Gradio, FastAPI
-- **Inference**: ComfyUI, TensorRT, vLLM
-- **Languages**: Python 3.11+, PowerShell, TypeScript
+## Using this with an AI agent
 
-## Integration Patterns
+MCP servers from this organization can be added to any MCP client configuration. tool-compass indexes the others and lets an agent discover tools by describing the task. Each repository has its own README, and most also carry an llms.txt.
 
-```
-Tool Compass (Orchestrator)
-    ├── File Compass (Semantic file search)
-    ├── Dev-Brain (Code analysis)
-    ├── Comfy-Headless (Image/video generation)
-    ├── Backpropagate (Model fine-tuning)
-    └── Integradio (UI components)
-```
-
-## Use Cases
-
-**For AI Agents:**
-- Discover tools by intent, not memory (Tool Compass)
-- Navigate codebases semantically (File Compass)
-- Generate test suites automatically (Dev-Brain)
-- Create visual assets on-demand (Comfy-Headless)
-
-**For Developers:**
-- Build production MCP servers (architecture patterns)
-- Integrate semantic search into applications
-- Fine-tune models for specific domains
-- Automate code quality workflows
-
-## Performance Characteristics
-
-- **Tool Discovery**: <20ms average latency
-- **File Search**: <100ms for 10k+ file codebases
-- **Image Generation**: 2-3x speedup with TensorRT
-- **Code Analysis**: 49 patterns, 11 categories
-
-## Getting Started
-
-1. Install Tool Compass for unified discovery
-2. Configure backends (bridge, doc, voice, comfy, video, chat)
-3. Use semantic search to find tools by intent
-4. Compose workflows across multiple MCP servers
-
-## Repository Standards
-
-All repositories follow:
-- Comprehensive READMEs with quickstart
-- llms.txt for AI context
-- Semantic versioning (tags)
-- GitHub Actions CI/CD
-- Production-grade error handling
-- Detailed API documentation
-
-## Community & Support
-
-- Organization: https://github.com/mcp-tool-shop-org
-- Issues: Individual repo issue trackers
-- Philosophy: Syntropy above all else
-
-## License
-
-Each repository has its own license - check individual repos for details.
-
----
-
-*Last Updated: 2026-03-18*
-*Total Repositories: 99*
-*Active MCP Servers: 8*
+Last updated: 2026-09-08
