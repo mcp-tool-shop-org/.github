@@ -52,6 +52,7 @@ export const config: SiteConfig = {
         ['Developer tooling', 'shipcheck · site-theme · repo-knowledge · registry-stats · npm-launcher', 'Release quality gates, Astro site templates, repo knowledge base, package download stats, verified binary launcher'],
         ['Games and game tooling', 'ai-rpg-engine · world-forge · motif · saints-mile · roll', 'Deterministic RPG simulation, 2D/2.5D world authoring, adaptive soundtracks, a frontier JRPG, dice and probability engine'],
         ['Ledger and verification', 'attestia · xrpl-lab · xrpl-camp · repomesh', 'Financial truth infrastructure, XRPL training, release verification for repo networks'],
+        ['Testing (sister org dogfood-lab)', 'testing-os · study-swarm', 'Provenance-confirmed test evidence stores and learning loops; research-grounded design decisions with externally verified citations'],
       ],
     },
     {

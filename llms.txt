@@ -61,6 +61,11 @@ MCP Tool Shop is an independent software studio. It builds the tools it uses to 
 - xrpl-camp: learn the XRP Ledger in one sitting with real transactions. https://github.com/mcp-tool-shop-org/xrpl-camp
 - repomesh: verify releases and anchors across repo networks. https://github.com/mcp-tool-shop-org/repomesh
 
+### Sister organization: dogfood-lab (https://github.com/dogfood-lab)
+Testing methods for AI-assisted software live in a second organization owned by the same studio.
+- testing-os: operating system for testing in the AI era; provenance-confirmed evidence stores and learning loops. `npx @dogfood-lab/dogfood-swarm`. https://github.com/dogfood-lab/testing-os
+- study-swarm: protocol for grounding design decisions in cited research and verifying every citation with a different model family. `npx @dogfood-lab/study-swarm`. https://github.com/dogfood-lab/study-swarm
+
 ## Engineering standards
 
 - Every tagged release passes the shipcheck gate: security policy and threat model, structured errors with exit codes, current documentation and changelog, clean packaging.

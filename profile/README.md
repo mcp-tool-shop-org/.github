@@ -59,6 +59,15 @@ MCP servers work with Claude Code, Claude Desktop, Cursor, VS Code, and any othe
 - **Documented in eight languages.** Most repositories ship READMEs in English, Japanese, Chinese, Spanish, French, Hindi, Italian, and Brazilian Portuguese, translated locally with [polyglot-mcp](https://github.com/mcp-tool-shop-org/polyglot-mcp).
 - **Accessible by default.** Low-vision-first CLI output and WCAG tooling via [accessibility-suite](https://github.com/mcp-tool-shop-org/accessibility-suite).
 
+## Sister organization: dogfood-lab
+
+Testing methods live in [dogfood-lab](https://github.com/dogfood-lab), an open workshop for how AI-assisted software should be verified. The tools in this organization are developed with both of its main projects.
+
+| Project | What it is | Install |
+|---|---|---|
+| [testing-os](https://github.com/dogfood-lab/testing-os) | Operating system for testing in the AI era: protocols, provenance-confirmed evidence stores, and learning loops. [Handbook](https://dogfood-lab.github.io/testing-os/) | `npx @dogfood-lab/dogfood-swarm` |
+| [study-swarm](https://github.com/dogfood-lab/study-swarm) | Ground design decisions in cited research, then verify every citation with a different model family before it becomes canon. [Handbook](https://dogfood-lab.github.io/study-swarm/) | `npx @dogfood-lab/study-swarm` |
+
 ## Repository status
 
 Every repository's README states which lane it is in:
