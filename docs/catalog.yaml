@@ -81,7 +81,7 @@ sister_org:
   name: dogfood-lab
   url: https://github.com/dogfood-lab
   note: a separate organization, not an area of this one
-  repos: [testing-os, study-swarm, ai-crucible, interface-audits]
+  repos: [testing-os, study-swarm]
 repos:
   - name: accessibility-suite
     area: developer-tooling

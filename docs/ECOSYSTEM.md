@@ -67,9 +67,8 @@ document classifies the remaining repositories into it rather than proposing a n
 | [Ledger and verification](#ledger-and-verification) | 5 | Attestation, receipts, and on-ledger proof for releases and financial truth |
 
 **Sister organization.** Testing and research methodology lives in [dogfood-lab](https://github.com/dogfood-lab),
-a separate organization owned by the same studio: `testing-os`, `study-swarm`, `ai-crucible`,
-`interface-audits`. It is not an eighth area of this organization, and its repositories are not in
-`catalog.yaml`.
+a separate organization owned by the same studio: `testing-os` and `study-swarm`. It is not an eighth area of
+this organization, and its repositories are not in `catalog.yaml`.
 
 ### How a repository gets its area
 
@@ -134,6 +133,10 @@ Each entry carries: `name`, `area`, optional `also`, `lane`, `visibility`, `lang
 **Lane** is derived, not asserted. `shipped` means the latest release is a semver tag at v1.0.0 or above.
 `in-development` means no release yet, or a pre-1.0 latest release. `archive` is the
 [prototypes](https://github.com/mcp-tool-shop-org/prototypes) repository, where retired work is kept.
+
+A repository can carry many tags and still be `in-development`: `mcp-arcade-cabinets` has fourteen releases and
+a latest of v0.12.0. The organization profile describes Shipped more loosely, as tagged releases plus CI and
+an install command. Where the two disagree, the version number is the stricter test and this one governs.
 
 **`package` and `install` are only present where this organization owns the name on the registry.** This is
 the one field most likely to mislead, so it is verified rather than inferred: npm ownership by the

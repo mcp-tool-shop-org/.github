@@ -31,7 +31,7 @@ MCP Tool Shop is an independent software studio. We build the tools we use to de
 | **Games and game tooling** | [ai-rpg-engine](https://github.com/mcp-tool-shop-org/ai-rpg-engine) · [world-forge](https://github.com/mcp-tool-shop-org/world-forge) · [motif](https://github.com/mcp-tool-shop-org/motif) · [saints-mile](https://github.com/mcp-tool-shop-org/saints-mile) · [roll](https://github.com/mcp-tool-shop-org/roll) | Deterministic RPG simulation, 2D/2.5D world authoring, adaptive soundtracks, a frontier JRPG, dice and probability engine |
 | **Ledger and verification** | [attestia](https://github.com/mcp-tool-shop-org/attestia) · [xrpl-lab](https://github.com/mcp-tool-shop-org/xrpl-lab) · [xrpl-camp](https://github.com/mcp-tool-shop-org/xrpl-camp) · [repomesh](https://github.com/mcp-tool-shop-org/repomesh) | Financial truth infrastructure, XRPL training, release verification for repo networks |
 
-The table above is a selection. Every public repository is classified by area, lane and install path in the [Ecosystem Specification](https://github.com/mcp-tool-shop-org/.github/blob/main/docs/ECOSYSTEM.md), with a machine-readable [catalog.yaml](https://github.com/mcp-tool-shop-org/.github/blob/main/docs/catalog.yaml).
+The table above is a selection. Every public repository is classified by area, lane and install path in the [Ecosystem Specification](../docs/ECOSYSTEM.md), with a machine-readable [catalog.yaml](../docs/catalog.yaml).
 
 The full catalog, with install commands and release history, is at [mcptoolshop.com/tools](https://mcptoolshop.com/tools/).
 
