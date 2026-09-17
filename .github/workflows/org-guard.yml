@@ -210,6 +210,13 @@ jobs:
               wf="$(printf "%s" "$wf_b64" | base64 -d 2>/dev/null || true)"
               [[ -z "$wf" ]] && continue
 
+              # This guard's own file carries the detection patterns below as
+              # literals. Scanning it matches the rule it implements, which made
+              # the guard report a permanent finding against itself.
+              if [[ "$repo" == ".github" && "$f" == "org-guard.yml" ]]; then
+                continue
+              fi
+
               # Master branch triggers
               if echo "$wf" | grep -qE 'branches:\s*\[.*master'; then
                 echo "::warning::$repo/$f — workflow triggers on 'master'"
