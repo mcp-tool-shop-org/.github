@@ -5,6 +5,8 @@
 Organization: https://github.com/mcp-tool-shop-org
 Website and tool catalog: https://mcptoolshop.com
 npm scope: https://www.npmjs.com/search?q=%40mcptoolshop (packages are published as `@mcptoolshop/<name>`)
+Ecosystem specification (all public repositories, classified): https://github.com/mcp-tool-shop-org/.github/blob/main/docs/ECOSYSTEM.md
+Machine-readable catalog (YAML, one entry per public repository): https://github.com/mcp-tool-shop-org/.github/blob/main/docs/catalog.yaml
 Support policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SUPPORT.md
 Security policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SECURITY.md
 
@@ -13,6 +15,9 @@ Security policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SECURITY
 MCP Tool Shop is an independent software studio. It builds the tools it uses to develop AI-assisted software and games, and publishes them as open source. Core functionality never requires an API key or a hosted service; tools run on a workstation GPU with Ollama, ComfyUI, and the Model Context Protocol (MCP). Optional cloud routing, where it exists, is opt-in with local fallback.
 
 ## Areas of work
+
+The five repositories listed per area below are starting points, not the full set. All 85 public
+repositories are classified in docs/ECOSYSTEM.md and docs/catalog.yaml, linked above.
 
 ### MCP servers
 - tool-compass: semantic MCP tool discovery; find tools by intent. `npx @mcptoolshop/tool-compass` or `pip install tool-compass`. https://github.com/mcp-tool-shop-org/tool-compass
@@ -82,4 +87,4 @@ Python, TypeScript, Rust, C#, GDScript (Godot 4), Astro. Runtimes and protocols:
 
 MCP servers from this organization can be added to any MCP client configuration. tool-compass indexes the others and lets an agent discover tools by describing the task. Each repository has its own README, and most also carry an llms.txt.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-17

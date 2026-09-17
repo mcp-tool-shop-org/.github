@@ -14,6 +14,8 @@ Thanks for helping improve MCP Tool Shop.
 - Keep changes focused and small.
 - Prefer links to authoritative docs.
 - Update both `profile/README.md` and `llms.txt` when changing positioning, tool lists, or architecture diagrams.
+- Update [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) and `docs/catalog.yaml` when a repository is added, renamed,
+  archived, or moves between areas. `catalog.yaml` is the source of truth for classification.
 
 ## Docs quality gates (CI)
 
@@ -27,4 +29,4 @@ If you need to temporarily ignore a flaky link, add it to `lychee.toml` exclusio
 ## Release / announcements
 
 - Use consistent naming: **MCP Tool Shop**, and tool names as in badges.
-- Keep badge links and the "Ecosystem Architecture" section in sync.
+- Keep badge links current and consistent with [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md).
