@@ -14,8 +14,11 @@ Thanks for helping improve MCP Tool Shop.
 - Keep changes focused and small.
 - Prefer links to authoritative docs.
 - Update both `profile/README.md` and `llms.txt` when changing positioning, tool lists, or architecture diagrams.
-- Update [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) and `docs/catalog.yaml` when a repository is added, renamed,
-  archived, or moves between areas. `catalog.yaml` is the source of truth for classification.
+- When a repository is added, renamed, archived, or moves between areas: edit the `CLASS` map in
+  `scripts/build-catalog.mjs`, run `node scripts/build-catalog.mjs`, then
+  `node scripts/check-catalog.mjs`. Do not hand-edit `docs/catalog.yaml` — it is generated, and the
+  generator refuses to run if any public repository is missing from `CLASS`. `catalog.yaml` is the
+  source of truth for classification; [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) is the prose over it.
 
 ## Docs quality gates (CI)
 
