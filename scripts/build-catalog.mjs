@@ -16,8 +16,8 @@
 // Ownership rule, which is the whole point of the package fields: a package name
 // existing on a registry proves nothing. Several repository names here collide
 // with unrelated packages published by other people. A package is ours only if
-// it is in the @mcptoolshop npm scope, or its npm maintainer is the organization
-// account, or its PyPI metadata carries the organization publishing identity.
+// it is in the @mcptoolshop npm scope, or its npm repository URL points at this
+// organization, or its PyPI metadata carries the organization publishing identity.
 
 import fs from 'fs';
 import path from 'path';
@@ -25,7 +25,10 @@ import { execFileSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const ORG = 'mcp-tool-shop-org';
-const NPM_ACCOUNT = 'mikefrilot';
+// Optional, and deliberately not committed: an npm maintainer account to accept as
+// ours. The two rules below already cover every package this organization owns, so
+// this stays empty in git and lives in the environment of whoever regenerates.
+const NPM_MAINTAINER = process.env.NPM_MAINTAINER || null;
 const PYPI_IDENTITY = 'mcp-tool-shop';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'docs', 'catalog.yaml');
@@ -230,7 +233,8 @@ async function npmOwned(name) {
   const maint = (d.maintainers || []).map(m => m.name);
   const latest = d.versions?.[d['dist-tags'].latest];
   const repoUrl = String(latest?.repository?.url || d.repository?.url || '');
-  return (maint.includes(NPM_ACCOUNT) || repoUrl.includes(ORG)) ? name : null;
+  if (repoUrl.includes(ORG)) return name;
+  return (NPM_MAINTAINER && maint.includes(NPM_MAINTAINER)) ? name : null;
 }
 async function pypiOwned(name) {
   const d = await getJSON('https://pypi.org/pypi/' + name + '/json');

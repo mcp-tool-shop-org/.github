@@ -26,6 +26,8 @@ PRs run:
 
 - Markdown lint
 - Link checking
+- Catalog consistency — `scripts/check-catalog.mjs`, which fails if
+  [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) and `docs/catalog.yaml` disagree
 
 If you need to temporarily ignore a flaky link, add it to `lychee.toml` exclusions with a short comment.
 
