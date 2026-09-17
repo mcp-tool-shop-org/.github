@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - '.github/workflows/**'
+      - '.github/*.yml'        # dependabot.yml, release.yml, FUNDING.yml
       - 'docs/**'
   workflow_dispatch:
 
