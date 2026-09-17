@@ -152,7 +152,7 @@ repos:
     latest_release: "v3.11.0 (2026-09-01)"
     package: null
     install: null
-    director_review: "Public catalog lists it under Games; the studio constitution calls it the runtime seat rather than a title."
+    classification_note: "Ratified 2026-09-17. It is the simulation, not a title. Contributors looking for RPG tooling look under Games, so it stays here."
   - name: ai-rpg-stage
     area: games-and-game-tooling
     lane: in-development
@@ -563,7 +563,7 @@ repos:
     package:
       pypi: "mcp-arcade"
     install: "pip install mcp-arcade"
-    director_review: "Tests MCP servers, but ships as named experiments plus a dataset; its sibling mcp-arcade-cabinets is a game."
+    classification_note: "Dual-use, ratified 2026-09-17. The product is GameDay testing over the JSON-RPC wire: the experiments look like games, but the oracle is the wire. MCP servers, also games."
   - name: mcp-arcade-cabinets
     area: games-and-game-tooling
     also: [mcp-servers]
@@ -578,7 +578,7 @@ repos:
     latest_release: "v0.12.0 (2026-09-17)"
     package: null
     install: null
-    director_review: "Games built out of MCP wire traffic, so it sits across Games and MCP servers."
+    classification_note: "Dual-use, ratified 2026-09-17. Playable cabinets that speak MCP because they replay tapes, not because they are a test harness. Games, also MCP servers."
   - name: mcp-stress-test
     area: mcp-servers
     lane: in-development
@@ -758,7 +758,7 @@ repos:
     install: "npx @mcptoolshop/prism-verify"
     starter: true
     paths: [d-verification]
-    director_review: "Public table places it in Agent infrastructure; its function (signed adjudication receipts) also reads as Ledger and verification."
+    classification_note: "Dual-use, ratified 2026-09-17. You install it to adjudicate a model answer inside an agent loop; the signed receipts are how it proves a verdict, not why it exists. Agent infrastructure, also ledger."
   - name: prompt-craft
     area: image-and-media-pipelines
     lane: shipped

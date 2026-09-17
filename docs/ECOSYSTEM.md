@@ -79,6 +79,12 @@ MCP server is an MCP server even if the subject matter is music.
 Repositories with a genuine second use carry an `also` field in `catalog.yaml`. Twenty-three do. That field is
 for real dual use, not for hedging.
 
+Four of those calls were contested before being settled, and each carries a `classification_note` recording
+why: `prism-verify`, `ai-rpg-engine`, `mcp-arcade` and `mcp-arcade-cabinets`. The note stays so the call can
+be argued with later rather than looking arbitrary. One is worth stating here: **`ai-rpg-engine` is the
+simulation, not a title** — it sits under Games because that is where someone looking for RPG tooling will
+look for it.
+
 ### Areas in full
 
 #### MCP servers
@@ -254,5 +260,5 @@ This specification is v1: two files and the pointers to them. It is deliberately
 - **v1.3** — a role handbook, if the seven roles above prove useful.
 - **Translations** — `ECOSYSTEM.md` in the other seven languages, after the English text settles.
 
-Open classification questions are recorded as `director_review` in `catalog.yaml` rather than silently
-decided. There are four: `prism-verify`, `ai-rpg-engine`, `mcp-arcade` and `mcp-arcade-cabinets`.
+Contested classifications are recorded as `classification_note` in `catalog.yaml` rather than silently
+decided or silently settled. Four carry one today.
