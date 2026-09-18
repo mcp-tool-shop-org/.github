@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - '.github/workflows/**'
+      - 'site/package.json'
+      - 'site/package-lock.json'
+      - 'site/astro.config.mjs'
       - '.github/*.yml'        # dependabot.yml, release.yml, FUNDING.yml
       - 'docs/**'
   workflow_dispatch:
