@@ -8,6 +8,10 @@ on:
       - 'site/package-lock.json'
       - 'site/astro.config.mjs'
       - '.github/*.yml'        # dependabot.yml, release.yml, FUNDING.yml
+      # Composite actions consumed by other repos by SHA. A PR that changes
+      # only these must still report the two required contexts, or it can
+      # never merge -- the same paths-gate deadlock this file already documents.
+      - '.github/actions/**'
       - 'docs/**'
   workflow_dispatch:
 
