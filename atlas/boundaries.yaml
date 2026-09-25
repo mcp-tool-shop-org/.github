@@ -1,0 +1,34 @@
+summary: ""
+boundaries:
+  - name: .github
+    globs:
+      - .github/**
+    role: config
+  - name: assets
+    globs:
+      - assets/**
+    role: data
+  - name: brand
+    globs:
+      - brand/**
+    role: docs
+  - name: docs
+    globs:
+      - docs/**
+    role: docs
+  - name: profile
+    globs:
+      - profile/**
+    role: docs
+  - name: root
+    globs:
+      - "*"
+    role: docs
+  - name: scripts
+    globs:
+      - scripts/**
+    role: code
+  - name: site
+    globs:
+      - site/**
+    role: site
