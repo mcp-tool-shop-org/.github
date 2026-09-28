@@ -122,10 +122,12 @@ npx @mcptoolshop/shipcheck audit
 
 <h2 align="center">Community and support</h2>
 
-- **Questions and ideas:** [GitHub Discussions](https://github.com/orgs/mcp-tool-shop-org/discussions)
-- **Bugs and feature requests:** open an issue on the relevant repository. See [SUPPORT.md](https://github.com/mcp-tool-shop-org/.github/blob/main/SUPPORT.md) for what to include.
-- **Security:** use private vulnerability reporting on the affected repository. Do not open a public issue. See [SECURITY.md](https://github.com/mcp-tool-shop-org/.github/blob/main/SECURITY.md).
-- **Contributing:** [CONTRIBUTING.md](https://github.com/mcp-tool-shop-org/.github/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/mcp-tool-shop-org/.github/blob/main/CODE_OF_CONDUCT.md).
+<p align="center">
+<b>Questions and ideas:</b> <a href="https://github.com/orgs/mcp-tool-shop-org/discussions">GitHub Discussions</a><br>
+<b>Bugs and feature requests:</b> open an issue on the relevant repository. See <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/SUPPORT.md">SUPPORT.md</a> for what to include.<br>
+<b>Security:</b> use private vulnerability reporting on the affected repository. Do not open a public issue. See <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/SECURITY.md">SECURITY.md</a>.<br>
+<b>Contributing:</b> <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> and the <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>.
+</p>
 
 ---
 
