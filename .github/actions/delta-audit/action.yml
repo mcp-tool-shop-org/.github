@@ -1,0 +1,45 @@
+name: Delta dependency audit
+description: >-
+  Fail a pull request only on advisories it INTRODUCES, judged against the base
+  branch from the npm advisory registry directly. Standing debt on the base is
+  printed, not failed -- that belongs to the push-time audit on the default
+  branch. Does not depend on GitHub's dependency graph, which was measured to
+  be silently per-manifest across the org on 2026-09-17.
+
+# Why this exists: a lockfile-wide `npm audit --audit-level=high` on a PR fails
+# on every advisory in the tree, including ones the PR did not touch, so a
+# one-package Dependabot bump fails on its unfixed siblings and the gate blocks
+# precisely the PRs that reduce the number it measures. That deadlocked 10 PRs
+# across 4 repos on 2026-09-17. The verdict is also a function of (lockfile,
+# wall-clock): a green PR goes red with no commit when a new advisory publishes.
+#
+# Usage, pinned by SHA like every other action in the org:
+#   - uses: mcp-tool-shop-org/.github/.github/actions/delta-audit@<sha> # delta-audit v1
+#     with:
+#       working-directory: site
+#       level: high
+# Needs only the PR head checked out; it fetches the base ref itself at depth 1.
+
+inputs:
+  working-directory:
+    description: Directory containing package.json and package-lock.json.
+    required: false
+    default: '.'
+  base-ref:
+    description: Branch to diff against. Defaults to the PR base, then the repo default branch.
+    required: false
+    default: ''
+  level:
+    description: 'Minimum severity that counts: low, moderate, high or critical.'
+    required: false
+    default: 'high'
+
+runs:
+  using: composite
+  steps:
+    - name: Delta audit against the base branch
+      shell: bash
+      env:
+        BASE: ${{ inputs.base-ref || github.base_ref || github.event.repository.default_branch }}
+      run: |
+        node "${{ github.action_path }}/delta-audit.mjs" "${{ inputs.working-directory }}" "origin/${BASE}" --level "${{ inputs.level }}"
