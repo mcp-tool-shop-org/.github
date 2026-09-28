@@ -1,17 +1,60 @@
-<div align="center">
+<!-- Banner -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mcp-tool-shop-org/.github/main/assets/logo.png" alt="MCP Tool Shop" width="100%">
+</p>
 
-<img src="https://raw.githubusercontent.com/mcp-tool-shop-org/.github/main/assets/mark.svg" alt="" width="88" height="88">
+<p align="center">
+  <b>Open-source tooling for local-first AI development.</b><br>
+  MCP servers, CLIs, training pipelines, and game-production tooling that run on your own hardware.
+</p>
 
-# MCP Tool Shop
+<p align="center">
+  <a href="https://mcptoolshop.com"><img src="https://img.shields.io/badge/Website-mcptoolshop.com-3b82f6?style=flat-square&logo=google-chrome&logoColor=white" alt="Website"></a>
+  <a href="https://mcptoolshop.com/tools/"><img src="https://img.shields.io/badge/Catalog-Tools-8b5cf6?style=flat-square&logo=gear&logoColor=white" alt="Tool Catalog"></a>
+  <a href="https://github.com/orgs/mcp-tool-shop-org/discussions"><img src="https://img.shields.io/badge/Discussions-Join-10b981?style=flat-square&logo=github&logoColor=white" alt="Discussions"></a>
+  <a href="https://www.npmjs.com/search?q=%40mcptoolshop"><img src="https://img.shields.io/badge/npm-%40mcptoolshop-cb3837?style=flat-square&logo=npm&logoColor=white" alt="npm"></a>
+  <br>
+  <img src="https://img.shields.io/badge/Repos-90+-1e3a5f?style=flat-square" alt="90+ Repositories">
+  <img src="https://img.shields.io/badge/License-MIT-60a5fa?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/Languages-8-1e3a5f?style=flat-square" alt="8 Languages">
+</p>
 
-**Open-source tooling for local-first AI development.**
+---
 
-MCP servers, command-line tools, training and dataset pipelines, and game-production tooling<br>
-that run on your own hardware. MIT licensed.
+## Quick start
 
-[**Website**](https://mcptoolshop.com) · [**Tool catalog**](https://mcptoolshop.com/tools/) · [**Releases**](https://mcptoolshop.com/releases/) · [**npm**](https://www.npmjs.com/search?q=%40mcptoolshop) · [**Discussions**](https://github.com/orgs/mcp-tool-shop-org/discussions)
+<table>
+<tr>
+<td width="50%">
 
-</div>
+**Find MCP tools by intent**
+```bash
+npx @mcptoolshop/tool-compass
+```
+
+**Drive ComfyUI from Python**
+```bash
+pip install comfy-headless
+```
+
+</td>
+<td width="50%">
+
+**Fine-tune and export GGUF**
+```bash
+pip install backpropagate
+```
+
+**Run the release quality gate**
+```bash
+npx @mcptoolshop/shipcheck audit
+```
+
+</td>
+</tr>
+</table>
+
+MCP servers work with Claude Code, Claude Desktop, Cursor, VS Code, and any other MCP client.
 
 ---
 
@@ -19,7 +62,8 @@ that run on your own hardware. MIT licensed.
 
 MCP Tool Shop is an independent software studio. We build the tools we use to develop AI-assisted software and games, and we publish them as open source. Everything is designed to run locally: on a workstation GPU, with Ollama, ComfyUI, and the Model Context Protocol, and with no cloud dependency for core functionality.
 
-## Areas of work
+<details>
+<summary><b>📦 Areas of work (expand for full catalog)</b></summary>
 
 | Area | Repositories | What they do |
 |---|---|---|
@@ -35,50 +79,45 @@ The table above is a selection. Every public repository is classified by area, l
 
 The full catalog, with install commands and release history, is at [mcptoolshop.com/tools](https://mcptoolshop.com/tools/).
 
-## Get started
+</details>
 
-```bash
-# Find MCP tools by describing what you need
-npx @mcptoolshop/tool-compass
-
-# Drive ComfyUI from Python, no node canvas required
-pip install comfy-headless
-
-# Fine-tune a local model and export GGUF for Ollama
-pip install backpropagate
-
-# Run the release quality gate on your own repository
-npx @mcptoolshop/shipcheck audit
-```
-
-MCP servers work with Claude Code, Claude Desktop, Cursor, VS Code, and any other MCP client.
+---
 
 ## How we ship
 
-- **Local-first.** Core functionality never requires an API key or a hosted service. Optional cloud routing is opt-in and falls back to local.
-- **A release gate, not a vibe check.** Every tagged release passes [shipcheck](https://github.com/mcp-tool-shop-org/shipcheck): security policy and threat model, structured errors with exit codes, current docs and changelog, clean packaging.
-- **Semantic versioning.** Every release is tagged on GitHub and published to npm or PyPI from CI.
-- **Documented in eight languages.** Most repositories ship READMEs in English, Japanese, Chinese, Spanish, French, Hindi, Italian, and Brazilian Portuguese, translated locally with [polyglot-mcp](https://github.com/mcp-tool-shop-org/polyglot-mcp).
-- **Accessible by default.** Low-vision-first CLI output and WCAG tooling via [accessibility-suite](https://github.com/mcp-tool-shop-org/accessibility-suite).
+> **Local-first.**
+> Core functionality never requires an API key or a hosted service. Optional cloud routing is opt-in and falls back to local.
+
+> **A release gate, not a vibe check.**
+> Every tagged release passes [shipcheck](https://github.com/mcp-tool-shop-org/shipcheck): security policy and threat model, structured errors with exit codes, current docs and changelog, clean packaging.
+
+> **Documented in eight languages.**
+> Most repositories ship READMEs in English, Japanese, Chinese, Spanish, French, Hindi, Italian, and Brazilian Portuguese, translated locally with [polyglot-mcp](https://github.com/mcp-tool-shop-org/polyglot-mcp).
+
+---
 
 ## Sister organization: dogfood-lab
 
-Testing methods live in [dogfood-lab](https://github.com/dogfood-lab), an open workshop for how AI-assisted software should be verified. The tools in this organization are developed with both of its main projects.
+Testing methods live in [dogfood-lab](https://github.com/dogfood-lab), an open workshop for how AI-assisted software should be verified.
 
 | Project | What it is | Install |
 |---|---|---|
 | [testing-os](https://github.com/dogfood-lab/testing-os) | Operating system for testing in the AI era: protocols, provenance-confirmed evidence stores, and learning loops. [Handbook](https://dogfood-lab.github.io/testing-os/) | `npx @dogfood-lab/dogfood-swarm` |
 | [study-swarm](https://github.com/dogfood-lab/study-swarm) | Ground design decisions in cited research, then verify every citation with a different model family before it becomes canon. [Handbook](https://dogfood-lab.github.io/study-swarm/) | `npx @dogfood-lab/study-swarm` |
 
-## Repository status
+---
+
+## Repository lanes
 
 Every repository's README states which lane it is in:
 
 | Lane | Meaning |
 |---|---|
-| **Shipped** | Tagged releases, CI, an install command, and a support policy |
-| **In development** | Active work, pre-1.0 or not yet released. APIs may change |
-| **Archive** | Retired prototypes and reusable patterns, kept in [prototypes](https://github.com/mcp-tool-shop-org/prototypes) |
+| 🟢 **Shipped** | Tagged releases, CI, an install command, and a support policy |
+| 🟡 **In development** | Active work, pre-1.0 or not yet released. APIs may change |
+| ⚪ **Archive** | Retired prototypes and reusable patterns, kept in [prototypes](https://github.com/mcp-tool-shop-org/prototypes) |
+
+---
 
 ## Community and support
 
@@ -89,8 +128,8 @@ Every repository's README states which lane it is in:
 
 ---
 
-<div align="center">
-
-[mcptoolshop.com](https://mcptoolshop.com) · [All repositories](https://github.com/orgs/mcp-tool-shop-org/repositories) · [MIT License](https://github.com/mcp-tool-shop-org/.github/blob/main/LICENSE)
-
-</div>
+<p align="center">
+  <a href="https://mcptoolshop.com">mcptoolshop.com</a> · 
+  <a href="https://github.com/orgs/mcp-tool-shop-org/repositories">All repositories</a> · 
+  <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/LICENSE">MIT License</a>
+</p>
