@@ -17,7 +17,7 @@
 
 ---
 
-## Quick start
+<h2 align="center">Quick start</h2>
 
 <table>
 <tr>
