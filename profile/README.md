@@ -1,4 +1,3 @@
-<div align="center">
 <p align="center">
   <b>Open-source tooling for local-first AI development.</b><br>
   MCP servers, CLIs, training pipelines, and game-production tooling that run on your own hardware.
@@ -23,12 +22,14 @@
 <tr>
 <td width="50%">
 
-<p align="center"><b>Find MCP tools by intent</b></p>
+<div align="center"><b>Find MCP tools by intent</b></div>
+
 ```bash
 npx @mcptoolshop/tool-compass
 ```
 
-<p align="center"><b>Drive ComfyUI from Python</b></p>
+<div align="center"><b>Drive ComfyUI from Python</b></div>
+
 ```bash
 pip install comfy-headless
 ```
@@ -36,12 +37,14 @@ pip install comfy-headless
 </td>
 <td width="50%">
 
-<p align="center"><b>Fine-tune and export GGUF</b></p>
+<div align="center"><b>Fine-tune and export GGUF</b></div>
+
 ```bash
 pip install backpropagate
 ```
 
-<p align="center"><b>Run the release quality gate</b></p>
+<div align="center"><b>Run the release quality gate</b></div>
+
 ```bash
 npx @mcptoolshop/shipcheck audit
 ```
@@ -50,13 +53,13 @@ npx @mcptoolshop/shipcheck audit
 </tr>
 </table>
 
-MCP servers work with Claude Code, Claude Desktop, Cursor, VS Code, and any other MCP client.
+<p align="center">MCP servers work with Claude Code, Claude Desktop, Cursor, VS Code, and any other MCP client.</p>
 
 ---
 
-## What we build
+<h2 align="center">What we build</h2>
 
-MCP Tool Shop is an independent software studio. We build the tools we use to develop AI-assisted software and games, and we publish them as open source. Everything is designed to run locally: on a workstation GPU, with Ollama, ComfyUI, and the Model Context Protocol, and with no cloud dependency for core functionality.
+<p align="center">MCP Tool Shop is an independent software studio. We build the tools we use to develop AI-assisted software and games, and we publish them as open source. Everything is designed to run locally: on a workstation GPU, with Ollama, ComfyUI, and the Model Context Protocol, and with no cloud dependency for core functionality.</p>
 
 <details>
 <summary><b>📦 Areas of work (expand for full catalog)</b></summary>
@@ -129,5 +132,3 @@ Every repository's README states which lane it is in:
   <a href="https://github.com/orgs/mcp-tool-shop-org/repositories">All repositories</a> · 
   <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/LICENSE">MIT License</a>
 </p>
-
-</div>
