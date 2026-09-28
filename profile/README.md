@@ -1,3 +1,4 @@
+<div align="center">
 <p align="center">
   <b>Open-source tooling for local-first AI development.</b><br>
   MCP servers, CLIs, training pipelines, and game-production tooling that run on your own hardware.
@@ -128,3 +129,5 @@ Every repository's README states which lane it is in:
   <a href="https://github.com/orgs/mcp-tool-shop-org/repositories">All repositories</a> · 
   <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/LICENSE">MIT License</a>
 </p>
+
+</div>
