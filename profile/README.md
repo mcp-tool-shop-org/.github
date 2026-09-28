@@ -18,7 +18,7 @@
 
 <h2 align="center">Quick start</h2>
 
-<table>
+<table align="center">
 <tr>
 <td width="50%" align="center">
 
