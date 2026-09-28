@@ -1,8 +1,3 @@
-<!-- Banner -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mcp-tool-shop-org/.github/main/assets/logo.png" alt="MCP Tool Shop" width="100%">
-</p>
-
 <p align="center">
   <b>Open-source tooling for local-first AI development.</b><br>
   MCP servers, CLIs, training pipelines, and game-production tooling that run on your own hardware.
