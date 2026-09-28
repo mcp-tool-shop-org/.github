@@ -23,12 +23,12 @@
 <tr>
 <td width="50%">
 
-**Find MCP tools by intent**
+<p align="center"><b>Find MCP tools by intent</b></p>
 ```bash
 npx @mcptoolshop/tool-compass
 ```
 
-**Drive ComfyUI from Python**
+<p align="center"><b>Drive ComfyUI from Python</b></p>
 ```bash
 pip install comfy-headless
 ```
@@ -36,12 +36,12 @@ pip install comfy-headless
 </td>
 <td width="50%">
 
-**Fine-tune and export GGUF**
+<p align="center"><b>Fine-tune and export GGUF</b></p>
 ```bash
 pip install backpropagate
 ```
 
-**Run the release quality gate**
+<p align="center"><b>Run the release quality gate</b></p>
 ```bash
 npx @mcptoolshop/shipcheck audit
 ```
