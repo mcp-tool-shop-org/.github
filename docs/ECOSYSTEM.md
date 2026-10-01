@@ -9,11 +9,11 @@ separate audience.
 
 | | |
 |---|---|
-| Public repositories | 89 unarchived, 3 archived |
-| Classified in this spec | 87 (excludes the `.github` configuration repo and one upstream fork) |
-| Shipped / in development / archive | 63 / 23 / 1 |
+| Public repositories | 88 unarchived, 3 archived |
+| Classified in this spec | 86 (excludes the `.github` configuration repo and one upstream fork) |
+| Shipped / in development / archive | 63 / 23 / 0 |
 | With a verified install command | 58 |
-| License | MIT, all 87 |
+| License | MIT, all 86 |
 
 ---
 
@@ -62,7 +62,7 @@ document classifies the remaining repositories into it rather than proposing a n
 | [Training and datasets](#training-and-datasets) | 9 | The local-model lifecycle: fine-tuning, datasets, training-step proof, capacity planning |
 | [Image and media pipelines](#image-and-media-pipelines) | 15 | Programmatic generation and verification of images, 3D, video and audio |
 | [Agent infrastructure](#agent-infrastructure) | 15 | What a coding agent runs on: orchestration, context routing, knowledge, verification, health |
-| [Developer tooling](#developer-tooling) | 14 | Release gates, registries, site scaffolding, and the machinery of shipping |
+| [Developer tooling](#developer-tooling) | 13 | Release gates, registries, site scaffolding, and the machinery of shipping |
 | [Games and game tooling](#games-and-game-tooling) | 18 | Shipped games and the authoring tools that produce them |
 | [Ledger and verification](#ledger-and-verification) | 6 | Attestation, receipts, and on-ledger proof for releases and financial truth |
 
@@ -115,7 +115,7 @@ This area covers the whole local-model lifecycle, not only training: `bytefit`, 
 #### Developer tooling
 
 `shipcheck` · `site-theme` · `repo-knowledge` · `registry-stats` · `registry-sync` · `npm-launcher` ·
-`forkctl` · `brand` · `accessibility-suite` · `commandui` · `rig-bridge` · `LeaseGate-Lite` · `housekeeping` · `prototypes`
+`forkctl` · `brand` · `accessibility-suite` · `commandui` · `rig-bridge` · `LeaseGate-Lite` · `housekeeping`
 
 #### Games and game tooling
 
@@ -141,8 +141,8 @@ Each entry carries: `name`, `area`, optional `also`, `lane`, `visibility`, `lang
 `starter`, `paths`, `depends_on`, `consumers`.
 
 **Lane** is derived, not asserted. `shipped` means the latest release is a semver tag at v1.0.0 or above.
-`in-development` means no release yet, or a pre-1.0 latest release. `archive` is the
-[prototypes](https://github.com/mcp-tool-shop-org/prototypes) repository, where retired work is kept.
+`in-development` means no release yet, or a pre-1.0 latest release. `archive` is retired work.
+The organization keeps it privately, so no public repository carries this lane today.
 
 A repository can carry many tags and still be `in-development`: `mcp-arcade-cabinets` has seventeen releases and
 a latest of v0.13.2. The organization profile describes Shipped more loosely, as tagged releases plus CI and
@@ -153,7 +153,7 @@ the one field most likely to mislead, so it is verified rather than inferred: np
 `@mcptoolshop` scope or the maintainer account, PyPI ownership by the publishing author identity. Several
 repository names collide with unrelated packages published by other people — `motif`, `roll`, `shipcheck`,
 `sovereign`, `synthesis` and others — and those entries carry `install: null` even though a package of that
-name exists. Twenty-nine repositories are source-only: clone and run, no install command.
+name exists. Twenty-eight repositories are source-only: clone and run, no install command.
 
 Six packages are published under a name that differs from their repository, which is why the field is
 explicit rather than derived from the repository name.
