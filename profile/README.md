@@ -72,13 +72,13 @@ npx @mcptoolshop/shipcheck audit
 | **Training and datasets** | [backpropagate](https://github.com/mcp-tool-shop-org/backpropagate) · [style-dataset-lab](https://github.com/mcp-tool-shop-org/style-dataset-lab) · [repo-dataset](https://github.com/mcp-tool-shop-org/repo-dataset) · [backprop-trace](https://github.com/mcp-tool-shop-org/backprop-trace) · [runforge-vscode](https://github.com/mcp-tool-shop-org/runforge-vscode) | Headless fine-tuning with GGUF export, canon-bound visual datasets, contamination-checked code datasets, training-step verification |
 | **Image and media pipelines** | [comfy-headless](https://github.com/mcp-tool-shop-org/comfy-headless) · [comfy-preflight](https://github.com/mcp-tool-shop-org/comfy-preflight) · [sprite-foundry](https://github.com/mcp-tool-shop-org/sprite-foundry) · [armature](https://github.com/mcp-tool-shop-org/armature) · [audiobooker](https://github.com/mcp-tool-shop-org/audiobooker) | Programmatic ComfyUI, pre-submission workflow gates, sprite generation, GLB-driven video, multi-voice audiobooks |
 | **Agent infrastructure** | [role-os](https://github.com/mcp-tool-shop-org/role-os) · [loadout-os](https://github.com/mcp-tool-shop-org/loadout-os) · [prism-verify](https://github.com/mcp-tool-shop-org/prism-verify) · [claude-guardian](https://github.com/mcp-tool-shop-org/claude-guardian) · [research-os](https://github.com/mcp-tool-shop-org/research-os) | Multi-agent orchestration, context routing, cross-family output verification, runtime health, research control plane |
-| **Developer tooling** | [shipcheck](https://github.com/mcp-tool-shop-org/shipcheck) · [site-theme](https://github.com/mcp-tool-shop-org/site-theme) · [repo-knowledge](https://github.com/mcp-tool-shop-org/repo-knowledge) · [registry-stats](https://github.com/mcp-tool-shop-org/registry-stats) · [npm-launcher](https://github.com/mcp-tool-shop-org/npm-launcher) | Release quality gates, Astro site templates, repo knowledge base, package download stats, verified binary launcher |
+| **Developer tooling** | [shipcheck](https://github.com/mcp-tool-shop-org/shipcheck) · [site-theme](https://github.com/mcp-tool-shop-org/site-theme) · [repo-knowledge](https://github.com/mcp-tool-shop-org/repo-knowledge) · [registry-stats](https://github.com/mcp-tool-shop-org/registry-stats) · [npm-launcher](https://github.com/mcp-tool-shop-org/npm-launcher) · [housekeeping](https://github.com/mcp-tool-shop-org/housekeeping) | Release quality gates, Astro site templates, repo knowledge base, package download stats, verified binary launcher, organization-wide CI and hygiene audits |
 | **Games and game tooling** | [ai-rpg-engine](https://github.com/mcp-tool-shop-org/ai-rpg-engine) · [world-forge](https://github.com/mcp-tool-shop-org/world-forge) · [motif](https://github.com/mcp-tool-shop-org/motif) · [saints-mile](https://github.com/mcp-tool-shop-org/saints-mile) · [roll](https://github.com/mcp-tool-shop-org/roll) | Deterministic RPG simulation, 2D/2.5D world authoring, adaptive soundtracks, a frontier JRPG, dice and probability engine |
 | **Ledger and verification** | [attestia](https://github.com/mcp-tool-shop-org/attestia) · [xrpl-lab](https://github.com/mcp-tool-shop-org/xrpl-lab) · [xrpl-camp](https://github.com/mcp-tool-shop-org/xrpl-camp) · [repomesh](https://github.com/mcp-tool-shop-org/repomesh) | Financial truth infrastructure, XRPL training, release verification for repo networks |
 
-<p align="center">The table above is a selection. Every public repository is classified by area, lane and install path in the [Ecosystem Specification](../docs/ECOSYSTEM.md), with a machine-readable [catalog.yaml](../docs/catalog.yaml).</p>
+<p align="center">The table above is a selection. Every public repository is classified by area, lane and install path in the <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/docs/ECOSYSTEM.md">Ecosystem Specification</a>, with a machine-readable <a href="https://github.com/mcp-tool-shop-org/.github/blob/main/docs/catalog.yaml">catalog.yaml</a>.</p>
 
-<p align="center">The full catalog, with install commands and release history, is at [mcptoolshop.com/tools](https://mcptoolshop.com/tools/).</p>
+<p align="center">The full catalog, with install commands and release history, is at <a href="https://mcptoolshop.com/tools/">mcptoolshop.com/tools</a>.</p>
 
 </details>
 
@@ -92,6 +92,9 @@ npx @mcptoolshop/shipcheck audit
 > **A release gate, not a vibe check.**
 > Every tagged release passes [shipcheck](https://github.com/mcp-tool-shop-org/shipcheck): security policy and threat model, structured errors with exit codes, current docs and changelog, clean packaging.
 
+> **Mapped and audited.**
+> Repositories carry an [Atlas](https://github.com/dogfood-lab/testing-os) map of how they work, checked in CI, and [housekeeping](https://github.com/mcp-tool-shop-org/housekeeping) audits the whole organization against written rules: CI, pull requests, releases, Actions cost and dependency advisories.
+
 > **Documented in eight languages.**
 > Most repositories ship READMEs in English, Japanese, Chinese, Spanish, French, Hindi, Italian, and Brazilian Portuguese, translated locally with [polyglot-mcp](https://github.com/mcp-tool-shop-org/polyglot-mcp).
 
@@ -99,7 +102,7 @@ npx @mcptoolshop/shipcheck audit
 
 <h2 align="center">Sister organization: dogfood-lab</h2>
 
-<p align="center">Testing methods live in [dogfood-lab](https://github.com/dogfood-lab), an open workshop for how AI-assisted software should be verified.</p>
+<p align="center">Testing methods live in <a href="https://github.com/dogfood-lab">dogfood-lab</a>, an open workshop for how AI-assisted software should be verified.</p>
 
 | Project | What it is | Install |
 |:---:|:---:|:---:|
