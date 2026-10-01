@@ -119,7 +119,7 @@ npx @mcptoolshop/shipcheck audit
 |:---:|:---:|
 | 🟢 **Shipped** | Tagged releases, CI, an install command, and a support policy |
 | 🟡 **In development** | Active work, pre-1.0 or not yet released. APIs may change |
-| ⚪ **Archive** | Retired prototypes and reusable patterns, kept in [prototypes](https://github.com/mcp-tool-shop-org/prototypes) |
+| ⚪ **Archive** | Retired work, no longer maintained or published |
 
 ---
 

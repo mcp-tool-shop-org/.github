@@ -118,7 +118,6 @@ const CLASS = {
   'commandui': ['developer-tooling', []],
   'rig-bridge': ['developer-tooling', []],
   'LeaseGate-Lite': ['developer-tooling', []],
-  'prototypes': ['developer-tooling', []],
   'housekeeping': ['developer-tooling', []],
 
   'ai-rpg-engine': ['games-and-game-tooling', []],
@@ -198,10 +197,9 @@ const EXCLUDE = {
   '.github': 'organization configuration and profile, not a product',
   'mcp-registry': 'a fork of the official Docker MCP registry, not a Tool Shop product',
 };
-const LANE_OVERRIDE = { 'prototypes': 'archive', 'sprite-foundry-packs': 'shipped' };
+const LANE_OVERRIDE = { 'sprite-foundry-packs': 'shipped' };
 const NOTES = {
   'sprite-foundry-packs': 'Releases are asset-pack tags (pirate-raiders-3d-2-v1.0.0), not semver product releases.',
-  'prototypes': 'The Archive lane itself: retired prototypes and reusable patterns.',
   'gpu-container': 'Five releases, all pre-release; no stable tag yet.',
   'mcp-tool-registry': 'Declares an @mcptoolshop npm name that has never been published. Consume from the repository.',
   'multi-claude': 'Declares an @mcptoolshop npm name that has never been published. Consume from the repository.',
