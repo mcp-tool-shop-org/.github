@@ -1,19 +1,10 @@
 name: Org Drift Guard
 
 on:
+  # No paths filter on pull requests, deliberately: this workflow emits the
+  # required status check, and a PR that matched no path (a docs-only change)
+  # would never report it and could never merge.
   pull_request:
-    paths:
-      - '.github/workflows/**'
-      - 'site/package.json'
-      - 'site/package-lock.json'
-      - 'site/astro.config.mjs'
-      - '.github/*.yml'        # dependabot.yml, release.yml, FUNDING.yml
-      # Composite actions consumed by other repos by SHA. A PR that changes
-      # only these must still report the two required contexts, or it can
-      # never merge -- the same paths-gate deadlock this file already documents.
-      - '.github/actions/**'
-      - 'docs/**'
-      - 'atlas/**'
   workflow_dispatch:
 
 concurrency:
