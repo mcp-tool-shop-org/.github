@@ -88,6 +88,7 @@ const CLASS = {
   'vocal-synth-engine': ['image-and-media-pipelines', []],
   'ai-jam-sessions': ['image-and-media-pipelines', ['mcp-servers']],
   'stillpoint': ['image-and-media-pipelines', []],
+  'si-jam-sessions': ['image-and-media-pipelines', []],
 
   'role-os': ['agent-infrastructure', []],
   'loadout-os': ['agent-infrastructure', []],
@@ -118,6 +119,7 @@ const CLASS = {
   'rig-bridge': ['developer-tooling', []],
   'LeaseGate-Lite': ['developer-tooling', []],
   'prototypes': ['developer-tooling', []],
+  'housekeeping': ['developer-tooling', []],
 
   'ai-rpg-engine': ['games-and-game-tooling', []],
   'world-forge': ['games-and-game-tooling', []],
@@ -136,12 +138,14 @@ const CLASS = {
   'storyboard-os': ['games-and-game-tooling', []],
   'mcp-arcade-cabinets': ['games-and-game-tooling', ['mcp-servers']],
   'ai-playtest': ['games-and-game-tooling', ['agent-infrastructure']],
+  'si-rpg-engine': ['games-and-game-tooling', []],
 
   'attestia': ['ledger-and-verification', []],
   'xrpl-lab': ['ledger-and-verification', []],
   'xrpl-camp': ['ledger-and-verification', []],
   'repomesh': ['ledger-and-verification', []],
   'xrpl-creator-capsule': ['ledger-and-verification', []],
+  'cognate': ['ledger-and-verification', ['agent-infrastructure']],
 };
 
 // Dual-use calls that were contested and are now settled. Ratified 2026-09-17.

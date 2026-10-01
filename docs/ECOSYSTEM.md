@@ -1,6 +1,6 @@
 # Ecosystem Specification
 
-**Version 1** · Generated 2026-09-17 · Machine-readable companion: [catalog.yaml](./catalog.yaml)
+**Version 1** · Generated 2026-10-01 · Machine-readable companion: [catalog.yaml](./catalog.yaml)
 
 This document explains how the repositories of MCP Tool Shop fit together, so that someone arriving at the
 organization can pick three to five repositories and start shipping. It classifies every public, unarchived
@@ -9,11 +9,11 @@ separate audience.
 
 | | |
 |---|---|
-| Public repositories | 85 unarchived, 3 archived |
-| Classified in this spec | 83 (excludes the `.github` configuration repo and one upstream fork) |
-| Shipped / in development / archive | 61 / 21 / 1 |
-| With a verified install command | 55 |
-| License | MIT, all 83 |
+| Public repositories | 89 unarchived, 3 archived |
+| Classified in this spec | 87 (excludes the `.github` configuration repo and one upstream fork) |
+| Shipped / in development / archive | 63 / 23 / 1 |
+| With a verified install command | 58 |
+| License | MIT, all 87 |
 
 ---
 
@@ -60,11 +60,11 @@ document classifies the remaining repositories into it rather than proposing a n
 |---|---|---|
 | [MCP servers](#mcp-servers) | 10 | Servers and gateways that speak the Model Context Protocol, and the tooling that tests them |
 | [Training and datasets](#training-and-datasets) | 9 | The local-model lifecycle: fine-tuning, datasets, training-step proof, capacity planning |
-| [Image and media pipelines](#image-and-media-pipelines) | 14 | Programmatic generation and verification of images, 3D, video and audio |
+| [Image and media pipelines](#image-and-media-pipelines) | 15 | Programmatic generation and verification of images, 3D, video and audio |
 | [Agent infrastructure](#agent-infrastructure) | 15 | What a coding agent runs on: orchestration, context routing, knowledge, verification, health |
-| [Developer tooling](#developer-tooling) | 13 | Release gates, registries, site scaffolding, and the machinery of shipping |
-| [Games and game tooling](#games-and-game-tooling) | 17 | Shipped games and the authoring tools that produce them |
-| [Ledger and verification](#ledger-and-verification) | 5 | Attestation, receipts, and on-ledger proof for releases and financial truth |
+| [Developer tooling](#developer-tooling) | 14 | Release gates, registries, site scaffolding, and the machinery of shipping |
+| [Games and game tooling](#games-and-game-tooling) | 18 | Shipped games and the authoring tools that produce them |
+| [Ledger and verification](#ledger-and-verification) | 6 | Attestation, receipts, and on-ledger proof for releases and financial truth |
 
 **Sister organization.** Testing and research methodology lives in [dogfood-lab](https://github.com/dogfood-lab),
 a separate organization owned by the same studio: `testing-os` and `study-swarm`. It is not an eighth area of
@@ -76,7 +76,7 @@ this organization, and its repositories are not in `catalog.yaml`.
 agents is agent infrastructure even though it also emits a training dataset. A repository whose output is an
 MCP server is an MCP server even if the subject matter is music.
 
-Repositories with a genuine second use carry an `also` field in `catalog.yaml`. Twenty-three do. That field is
+Repositories with a genuine second use carry an `also` field in `catalog.yaml`. Twenty-four do. That field is
 for real dual use, not for hedging.
 
 Four of those calls were contested before being settled, and each carries a `classification_note` recording
@@ -104,7 +104,7 @@ This area covers the whole local-model lifecycle, not only training: `bytefit`, 
 
 `comfy-headless` · `comfy-preflight` · `sprite-foundry` · `sprite-foundry-packs` · `armature` · `facet` ·
 `asset-forge` · `prompt-craft` · `codecomfy-vscode` · `audiobooker` · `fx-dub` · `vocal-synth-engine` ·
-`ai-jam-sessions` · `stillpoint`
+`ai-jam-sessions` · `si-jam-sessions` · `stillpoint`
 
 #### Agent infrastructure
 
@@ -115,17 +115,17 @@ This area covers the whole local-model lifecycle, not only training: `bytefit`, 
 #### Developer tooling
 
 `shipcheck` · `site-theme` · `repo-knowledge` · `registry-stats` · `registry-sync` · `npm-launcher` ·
-`forkctl` · `brand` · `accessibility-suite` · `commandui` · `rig-bridge` · `LeaseGate-Lite` · `prototypes`
+`forkctl` · `brand` · `accessibility-suite` · `commandui` · `rig-bridge` · `LeaseGate-Lite` · `housekeeping` · `prototypes`
 
 #### Games and game tooling
 
 `ai-rpg-engine` · `ai-rpg-stage` · `world-forge` · `storyboard-os` · `motif` · `roll` · `glyphstudio` ·
 `ai-playtest` · `saints-mile` · `star-freight` · `star-freight-client` · `claude-rpg` · `portlight` ·
-`escape-the-valley` · `sovereign` · `sovereignty` · `mcp-arcade-cabinets`
+`escape-the-valley` · `sovereign` · `sovereignty` · `mcp-arcade-cabinets` · `si-rpg-engine`
 
 #### Ledger and verification
 
-`attestia` · `repomesh` · `xrpl-lab` · `xrpl-camp` · `xrpl-creator-capsule`
+`attestia` · `repomesh` · `xrpl-lab` · `xrpl-camp` · `xrpl-creator-capsule` · `cognate`
 
 ## 4. Repository taxonomy
 
@@ -144,8 +144,8 @@ Each entry carries: `name`, `area`, optional `also`, `lane`, `visibility`, `lang
 `in-development` means no release yet, or a pre-1.0 latest release. `archive` is the
 [prototypes](https://github.com/mcp-tool-shop-org/prototypes) repository, where retired work is kept.
 
-A repository can carry many tags and still be `in-development`: `mcp-arcade-cabinets` has fourteen releases and
-a latest of v0.12.0. The organization profile describes Shipped more loosely, as tagged releases plus CI and
+A repository can carry many tags and still be `in-development`: `mcp-arcade-cabinets` has seventeen releases and
+a latest of v0.13.2. The organization profile describes Shipped more loosely, as tagged releases plus CI and
 an install command. Where the two disagree, the version number is the stricter test and this one governs.
 
 **`package` and `install` are only present where this organization owns the name on the registry.** This is
@@ -153,7 +153,7 @@ the one field most likely to mislead, so it is verified rather than inferred: np
 `@mcptoolshop` scope or the maintainer account, PyPI ownership by the publishing author identity. Several
 repository names collide with unrelated packages published by other people — `motif`, `roll`, `shipcheck`,
 `sovereign`, `synthesis` and others — and those entries carry `install: null` even though a package of that
-name exists. Twenty-eight repositories are source-only: clone and run, no install command.
+name exists. Twenty-nine repositories are source-only: clone and run, no install command.
 
 Six packages are published under a name that differs from their repository, which is why the field is
 explicit rather than derived from the repository name.
