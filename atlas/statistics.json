@@ -113,7 +113,7 @@
       "confidence": "low",
       "highWater": null,
       "name": "scripts",
-      "qualifyingSourceCommits": 2,
+      "qualifyingSourceCommits": 3,
       "rebaseline": null
     },
     {
@@ -157,8 +157,8 @@
         "path": ".github/workflows/docs-quality.yml"
       },
       {
-        "commits": 7,
-        "lines": 43,
+        "commits": 9,
+        "lines": 47,
         "path": ".github/workflows/org-guard.yml"
       },
       {
@@ -242,8 +242,8 @@
         "path": "assets/mark.svg"
       },
       {
-        "commits": 2,
-        "lines": 146,
+        "commits": 4,
+        "lines": 204,
         "path": "atlas/README.md"
       },
       {
@@ -252,28 +252,28 @@
         "path": "atlas/boundaries.yaml"
       },
       {
-        "commits": 2,
-        "lines": 370,
+        "commits": 4,
+        "lines": 612,
         "path": "atlas/page.json"
       },
       {
-        "commits": 2,
-        "lines": 740,
+        "commits": 4,
+        "lines": 988,
         "path": "atlas/statistics.json"
       },
       {
-        "commits": 2,
-        "lines": 2090,
+        "commits": 4,
+        "lines": 3312,
         "path": "atlas/structure.json"
       },
       {
-        "commits": 2,
-        "lines": 268,
+        "commits": 4,
+        "lines": 340,
         "path": "docs/ECOSYSTEM.md"
       },
       {
-        "commits": 2,
-        "lines": 1306,
+        "commits": 4,
+        "lines": 1574,
         "path": "docs/catalog.yaml"
       },
       {
@@ -287,13 +287,13 @@
         "path": "lychee.toml"
       },
       {
-        "commits": 16,
-        "lines": 687,
+        "commits": 17,
+        "lines": 708,
         "path": "profile/README.md"
       },
       {
-        "commits": 2,
-        "lines": 426,
+        "commits": 4,
+        "lines": 434,
         "path": "scripts/build-catalog.mjs"
       },
       {
@@ -322,9 +322,9 @@
     "level": "low",
     "reason": "fewer than 25 source files reach 10 revisions in the window"
   },
-  "generatedAt": "2026-09-30T20:06:29.102Z",
+  "generatedAt": "2026-10-01T02:12:56.489Z",
   "generatedFrom": {
-    "commit": "d05c730ab4273f334d9363c56b7250f8923540bd"
+    "commit": "173f84e87d74af18a61f75f01101f063bc76c9a0"
   },
   "pairs": [],
   "parameters": {
@@ -337,16 +337,16 @@
     "floor": "fallen",
     "floorHeld": false,
     "floorTrigger": "revision-depth",
-    "headDate": "2026-09-27T23:32:58-04:00",
+    "headDate": "2026-09-30T17:17:26-07:00",
     "inScopeFiles": 87,
     "pinnedStart": null,
     "priorFloor": "fallen",
-    "qualifyingCommits": 30,
+    "qualifyingCommits": 31,
     "qualifyingMinimum": 30,
     "revisions": 5,
     "shared": 10,
     "sharedFloorUsed": 3,
-    "since": "2026-04-01T03:32:58.000Z",
+    "since": "2026-04-04T00:17:26.000Z",
     "sourceExtensions": [
       ".js",
       ".mjs",
