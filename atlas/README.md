@@ -1,15 +1,14 @@
 # .github: how it works
 
-Mapped at 2026-10-01 from commit 173f84e by Atlas 1.24.0.
+Mapped at 2026-10-15 from commit 37aad02 by Atlas 1.24.0.
 
 ## What this is
 
 This is the organization's profile page and the community-health files its repositories inherit. 8 parts, in JavaScript (4 files), Astro (1 file), CSS (1 file), Python (1 file), TypeScript (1 file) and shell (1 file). Work enters through 4 doors; the busiest is Org Drift Guard, which reaches 3 parts. It deploys a site to GitHub Pages. Other repositories use the Delta dependency audit action.
 
-## What changed since 2026-09-30 (d05c730)
+## What changed since 2026-10-01 (173f84e)
 
-- Org Drift Guard's pull request trigger no longer names `.github/*.yml`, `.github/actions/**`, `.github/workflows/**`, `atlas/**`, `docs/**`, `site/astro.config.mjs`, `site/package-lock.json` and `site/package.json`.
-- 5 files changed content, across 4 parts.
+Nothing structural changed since 2026-10-01; 7 files changed content.
 
 ## What comes in
 
