@@ -9,11 +9,11 @@ separate audience.
 
 | | |
 |---|---|
-| Public repositories | 88 unarchived, 3 archived |
-| Classified in this spec | 86 (excludes the `.github` configuration repo and one upstream fork) |
-| Shipped / in development / archive | 63 / 23 / 0 |
-| With a verified install command | 58 |
-| License | MIT, all 86 |
+| Public repositories | 114 unarchived, 4 archived |
+| Classified in this spec | 112 (excludes the `.github` configuration repo and one upstream fork) |
+| Shipped / in development / archive | 72 / 40 / 0 |
+| With a verified install command | 66 |
+| License | MIT for the code in all 112; `rnd-data`'s data is CC BY 4.0 and `portlight-bounty` adds a licence for its art |
 
 ---
 
@@ -33,14 +33,14 @@ working toolchain that happens to be public.
 
 Four ideas explain most of the structure.
 
-**A contributor owns a domain, not the organization.** Eighty-three repositories is too many to hold in your
-head, and you never need to. Every repository belongs to exactly one of seven areas. Learn one area and you
+**A contributor owns a domain, not the organization.** A hundred and twelve repositories is too many to hold in
+your head, and you never need to. Every repository belongs to exactly one of eight areas. Learn one area and you
 can contribute without knowing the rest.
 
 **Capabilities are verbs, not folders.** The organization provides discovery, execution, verification,
-creation, and distribution. Those are things the tools *do*, and they cut across all seven areas: a discovery
+creation, and distribution. Those are things the tools *do*, and they cut across all eight areas: a discovery
 tool and a verification tool routinely live in different areas and still belong to the same workflow. They are
-deliberately not an eighth area. Section 7 shows what they look like in practice.
+deliberately not a ninth area. Section 7 shows what they look like in practice.
 
 **Verification is a separate step performed by something else.** No tool grades its own output. This shows up
 everywhere: a release passes `shipcheck` before it ships, a model's answer is adjudicated by `prism-verify`
@@ -53,22 +53,23 @@ alternative was an API bill.
 
 ## 3. Domain map
 
-Seven areas. This taxonomy is the one already published on the organization profile and in `llms.txt`; this
-document classifies the remaining repositories into it rather than proposing a new one.
+Eight areas. Research was added in November 2026, when the research bench, its data and its instruments became
+public; the other seven are the taxonomy already published on the organization profile and in `llms.txt`.
 
 | Area | Count | What lives here |
 |---|---|---|
-| [MCP servers](#mcp-servers) | 10 | Servers and gateways that speak the Model Context Protocol, and the tooling that tests them |
-| [Training and datasets](#training-and-datasets) | 9 | The local-model lifecycle: fine-tuning, datasets, training-step proof, capacity planning |
-| [Image and media pipelines](#image-and-media-pipelines) | 15 | Programmatic generation and verification of images, 3D, video and audio |
-| [Agent infrastructure](#agent-infrastructure) | 15 | What a coding agent runs on: orchestration, context routing, knowledge, verification, health |
-| [Developer tooling](#developer-tooling) | 13 | Release gates, registries, site scaffolding, and the machinery of shipping |
-| [Games and game tooling](#games-and-game-tooling) | 18 | Shipped games and the authoring tools that produce them |
+| [Research](#research) | 5 | The research bench, its data and receipts, and the instruments and studies that measure models, media and the world |
+| [MCP servers](#mcp-servers) | 9 | Servers and gateways that speak the Model Context Protocol, and the tooling that tests them |
+| [Training and datasets](#training-and-datasets) | 21 | The local-model lifecycle: datasets, fine-tuning, training-step proof, device routing, rented GPUs, local-model apps |
+| [Image and media pipelines](#image-and-media-pipelines) | 19 | Programmatic generation and verification of images, 3D, video and audio |
+| [Agent infrastructure](#agent-infrastructure) | 17 | What a coding agent runs on: orchestration, context routing, knowledge, verification, health |
+| [Developer tooling](#developer-tooling) | 14 | Release gates, registries, site scaffolding, and the machinery of shipping |
+| [Games and game tooling](#games-and-game-tooling) | 21 | Shipped games and the authoring tools that produce them |
 | [Ledger and verification](#ledger-and-verification) | 6 | Attestation, receipts, and on-ledger proof for releases and financial truth |
 
-**Sister organization.** Testing and research methodology lives in [dogfood-lab](https://github.com/dogfood-lab),
-a separate organization owned by the same studio: `testing-os` and `study-swarm`. It is not an eighth area of
-this organization, and its repositories are not in `catalog.yaml`.
+**Sister organization.** Testing methodology lives in [dogfood-lab](https://github.com/dogfood-lab), a separate
+organization owned by the same studio: `testing-os` (home of Atlas), `study-swarm` and `interface-audits`. It is not
+an area of this organization, and its repositories are not in `catalog.yaml`.
 
 ### How a repository gets its area
 
@@ -76,7 +77,7 @@ this organization, and its repositories are not in `catalog.yaml`.
 agents is agent infrastructure even though it also emits a training dataset. A repository whose output is an
 MCP server is an MCP server even if the subject matter is music.
 
-Repositories with a genuine second use carry an `also` field in `catalog.yaml`. Twenty-four do. That field is
+Repositories with a genuine second use carry an `also` field in `catalog.yaml`. Thirty-eight do. That field is
 for real dual use, not for hedging.
 
 Four of those calls were contested before being settled, and each carries a `classification_note` recording
@@ -87,45 +88,58 @@ look for it.
 
 ### Areas in full
 
+#### Research
+
+`blindpanel` · `rnd` · `rnd-data` · `schumann-surface` · `sense-si`
+
+`rnd` is the bench and its newsletter; `rnd-data` holds every run's receipts and outputs, each public file pinned
+by SHA-256. Verified topics graduate to readouts, listed under Agent infrastructure because agents query it.
+
 #### MCP servers
 
-`tool-compass` · `ollama-intern-mcp` · `polyglot-mcp` · `mcp-voice-soundboard` · `plain-sight` ·
-`ai-eyes-mcp` · `sensor-humor` · `mcp-tool-registry` · `mcp-stress-test` · `mcp-arcade`
+`mcp-arcade` · `mcp-stress-test` · `mcp-tool-registry` · `mcp-voice-soundboard` · `ollama-intern-mcp` ·
+`plain-sight` · `polyglot-mcp` · `sensor-humor` · `tool-compass`
 
 #### Training and datasets
 
-`backpropagate` · `backprop-trace` · `style-dataset-lab` · `repo-dataset` · `runforge-vscode` · `bytefit` ·
-`gpu-container` · `engine-room` · `portlight-ships`
+`aspire-si` · `aspire-si-gates` · `backprop-trace` · `backpropagate` · `bytefit` · `dataset-desk` ·
+`engine-room` · `gpu-container` · `incontrol` · `interlock` · `offrig` · `portlight-ships` ·
+`reasoning-dataset-lab` · `repo-dataset` · `role-set` · `runforge` · `runforge-vscode` · `scalarscope` ·
+`style-dataset-lab` · `understanding-dataset-lab` · `watchdog`
 
-This area covers the whole local-model lifecycle, not only training: `bytefit`, `gpu-container` and
-`engine-room` are how a model gets planned, placed and served on a real rig.
+This area covers the whole local-model lifecycle, not only training: `bytefit`, `gpu-container`, `engine-room`,
+`interlock`, `offrig` and `watchdog` are how a model gets planned, placed, routed, guarded and served on a real
+rig or a rented one. The dataset labs make every answer key in code before a model words an item.
 
 #### Image and media pipelines
 
-`comfy-headless` · `comfy-preflight` · `sprite-foundry` · `sprite-foundry-packs` · `armature` · `facet` ·
-`asset-forge` · `prompt-craft` · `codecomfy-vscode` · `audiobooker` · `fx-dub` · `vocal-synth-engine` ·
-`ai-jam-sessions` · `si-jam-sessions` · `stillpoint`
+`ai-jam-sessions` · `armature` · `asset-forge` · `audiobooker` · `codecomfy-vscode` · `comfy-headless` ·
+`comfy-preflight` · `facet` · `fx-dub` · `portrait-forge` · `prompt-craft` · `si-jam-sessions` ·
+`sprite-foundry` · `sprite-foundry-2p5d` · `sprite-foundry-packs` · `sprite-motion` · `sprite-motion-mcp` ·
+`stillpoint` · `vocal-synth-engine`
 
 #### Agent infrastructure
 
-`role-os` · `loadout-os` · `knowledge-core` · `research-os` · `research-packs` · `readouts` · `record-index` ·
-`claude-synergy` · `claude-guardian` · `prism-verify` · `synthesis` · `taste-engine` · `websketch-ir` ·
-`db-cluster` · `multi-claude`
+`chips` · `claude-guardian` · `claude-synergy` · `db-cluster` · `knowledge-core` · `loadout-os` ·
+`multi-claude` · `prism-verify` · `readouts` · `record-index` · `research-os` · `research-packs` · `role-os` ·
+`session-record` · `synthesis` · `taste-engine` · `websketch-ir`
 
 #### Developer tooling
 
-`shipcheck` · `site-theme` · `repo-knowledge` · `registry-stats` · `registry-sync` · `npm-launcher` ·
-`forkctl` · `brand` · `accessibility-suite` · `commandui` · `rig-bridge` · `LeaseGate-Lite` · `housekeeping`
+`accessibility-suite` · `brand` · `commandui` · `forkctl` · `housekeeping` · `LeaseGate-Lite` · `npm-launcher`
+· `registry-stats` · `registry-sync` · `repo-knowledge` · `rig-bridge` · `shipcheck` · `site-theme` ·
+`studio-harness`
 
 #### Games and game tooling
 
-`ai-rpg-engine` · `ai-rpg-stage` · `world-forge` · `storyboard-os` · `motif` · `roll` · `glyphstudio` ·
-`ai-playtest` · `saints-mile` · `star-freight` · `star-freight-client` · `claude-rpg` · `portlight` ·
-`escape-the-valley` · `sovereign` · `sovereignty` · `mcp-arcade-cabinets` · `si-rpg-engine`
+`ai-playtest` · `ai-rpg-engine` · `ai-rpg-stage` · `claude-rpg` · `escape-the-valley` · `glyphstudio` ·
+`lokey-typer` · `mcp-arcade-cabinets` · `motif` · `portlight` · `portlight-bounty` · `roll` · `saints-mile` ·
+`si-rpg-engine` · `sovereign` · `sovereignty` · `star-freight` · `star-freight-client` · `storyboard-os` ·
+`visual-design-bible` · `world-forge`
 
 #### Ledger and verification
 
-`attestia` · `repomesh` · `xrpl-lab` · `xrpl-camp` · `xrpl-creator-capsule` · `cognate`
+`attestia` · `cognate` · `repomesh` · `xrpl-camp` · `xrpl-creator-capsule` · `xrpl-lab`
 
 ## 4. Repository taxonomy
 
@@ -153,7 +167,7 @@ the one field most likely to mislead, so it is verified rather than inferred: np
 `@mcptoolshop` scope or the maintainer account, PyPI ownership by the publishing author identity. Several
 repository names collide with unrelated packages published by other people — `motif`, `roll`, `shipcheck`,
 `sovereign`, `synthesis` and others — and those entries carry `install: null` even though a package of that
-name exists. Twenty-eight repositories are source-only: clone and run, no install command.
+name exists. Forty-six repositories are source-only: clone and run, no install command.
 
 Six packages are published under a name that differs from their repository, which is why the field is
 explicit rather than derived from the repository name.

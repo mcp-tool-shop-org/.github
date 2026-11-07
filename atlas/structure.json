@@ -80,7 +80,7 @@
           "path": ".github/release.yml"
         },
         {
-          "hash": "60d48220dcf84fa313eaf49c08c15c2cee81b231a2e3426e5066c2b883b6434e",
+          "hash": "c92502bd9990cd75300fcd7d47500f15d5bbab2de36c6df5f284d807e09fd1a7",
           "path": ".github/workflows/docs-quality.yml"
         },
         {
@@ -269,7 +269,7 @@
           "path": "docs/BRANCH_POLICY.md"
         },
         {
-          "hash": "1ba63311f3e543503741366815e4f1d00fa4e637dec12230d8c7b706670347bc",
+          "hash": "5a2a4baf6dc393e48c15bf9a1618014375ff5ff7c14e427b04a57062bea12eab",
           "path": "docs/ECOSYSTEM.md"
         },
         {
@@ -293,7 +293,7 @@
           "path": "docs/VERSIONING.md"
         },
         {
-          "hash": "c839f38da04e4ae907c2c33f217c155b6e1b90f65ec1307d6db9ea2131993b56",
+          "hash": "7d8867ead4a6f4fee5e72fdf9fddf1acdd14d07dc451949b80d94a32ea56f713",
           "path": "docs/catalog.yaml"
         },
         {
@@ -415,7 +415,7 @@
           "path": "SUPPORT.md"
         },
         {
-          "hash": "55eeace1b8223c66d6dc29f3653eff233e36a53380e881cd670ecb20779fe0af",
+          "hash": "3eb247d28fbd722cc4d9acfccb904d4babc09ed41d3f6fe037238d9fa559c096",
           "path": "llms.txt"
         },
         {
@@ -450,20 +450,20 @@
             {
               "in": "getJSON",
               "kind": "catch",
-              "line": 219
+              "line": 250
             },
             {
               "in": "getText",
               "kind": "catch",
-              "line": 222
+              "line": 253
             },
             {
               "in": "main",
               "kind": "catch",
-              "line": 289
+              "line": 320
             }
           ],
-          "hash": "77e999add56ad232fe113d842e817e5e5e4ced2dc1990b00d18e6b4f09f236f3",
+          "hash": "4894d52deb10a8ff6a301d39c232105ef7df67f7d1d3b2bbbc41c2349bfd2374",
           "path": "scripts/build-catalog.mjs"
         },
         {
@@ -1135,7 +1135,7 @@
   "edges": [],
   "engine": "1.24.0",
   "generatedFrom": {
-    "commit": "23aae746b5cb26ae0d2f37d8c5d254356178798d",
+    "commit": "4cefdba7225305e3ff5c27db0a522d926461b651",
     "tracked": 82
   },
   "landings": [
