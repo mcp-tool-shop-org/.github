@@ -1,12 +1,14 @@
 # MCP Tool Shop
 
-> Open-source tooling for local-first AI development: MCP servers, command-line tools, training and dataset pipelines, and game-production tooling that run on your own hardware. MIT licensed.
+> Open-source research and tooling for local-first AI: measured research, datasets whose answers are proven by code, and the MCP servers, command-line tools and training pipelines that research needs. Runs on your own hardware. MIT licensed.
 
 Organization: https://github.com/mcp-tool-shop-org
 Website and tool catalog: https://mcptoolshop.com
 npm scope: https://www.npmjs.com/search?q=%40mcptoolshop (packages are published as `@mcptoolshop/<name>`)
 Ecosystem specification (all public repositories, classified): https://github.com/mcp-tool-shop-org/.github/blob/main/docs/ECOSYSTEM.md
 Machine-readable catalog (YAML, one entry per public repository): https://github.com/mcp-tool-shop-org/.github/blob/main/docs/catalog.yaml
+Research newsletter (The Bench, one issue each weekday): https://mcp-tool-shop-org.github.io/rnd/
+Hugging Face (public datasets, models and Spaces): https://huggingface.co/mcp-tool-shop
 Support policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SUPPORT.md
 Security policy: https://github.com/mcp-tool-shop-org/.github/blob/main/SECURITY.md
 
@@ -16,8 +18,19 @@ MCP Tool Shop is an independent software studio. It builds the tools it uses to 
 
 ## Areas of work
 
-The five repositories listed per area below are starting points, not the full set. All 85 public
+The repositories listed per area below are starting points, not the full set. All 112 public
 repositories are classified in docs/ECOSYSTEM.md and docs/catalog.yaml, linked above.
+
+### Research
+- rnd: the research bench: sourced entries, rig experiments with receipts, and The Bench newsletter. https://github.com/mcp-tool-shop-org/rnd
+- rnd-data: the raw data behind the research, every public file pinned by SHA-256 (data CC BY 4.0). https://github.com/mcp-tool-shop-org/rnd-data
+- sense-si: Python instruments for seeing and hearing that answer questions over their records. https://github.com/mcp-tool-shop-org/sense-si
+- blindpanel: blind, counterbalanced human-rating viewer for generated media. https://github.com/mcp-tool-shop-org/blindpanel
+
+### Datasets
+- reasoning-dataset-lab: puzzles, quizzes and verification items where code proves the answer key. `pip install reasoning-dataset-lab`. https://github.com/mcp-tool-shop-org/reasoning-dataset-lab
+- understanding-dataset-lab: multi-party scenes for cognitive empathy with code-made answer keys (prototype). https://github.com/mcp-tool-shop-org/understanding-dataset-lab
+- dataset-desk: review visual datasets: duplicates, outliers, search, and a model-free description gate. https://github.com/mcp-tool-shop-org/dataset-desk
 
 ### MCP servers
 - tool-compass: semantic MCP tool discovery; find tools by intent. `npx @mcptoolshop/tool-compass` or `pip install tool-compass`. https://github.com/mcp-tool-shop-org/tool-compass
@@ -68,7 +81,7 @@ repositories are classified in docs/ECOSYSTEM.md and docs/catalog.yaml, linked a
 
 ### Sister organization: dogfood-lab (https://github.com/dogfood-lab)
 Testing methods for AI-assisted software live in a second organization owned by the same studio.
-- testing-os: operating system for testing in the AI era; provenance-confirmed evidence stores and learning loops. `npx @dogfood-lab/dogfood-swarm`. https://github.com/dogfood-lab/testing-os
+- testing-os: home of Atlas, the repository map every MCP Tool Shop repository with workflows keeps and checks in CI; also runs coordinated health, feature and release passes. `npx @dogfood-lab/atlas`. https://github.com/dogfood-lab/testing-os
 - study-swarm: protocol for grounding design decisions in cited research and verifying every citation with a different model family. `npx @dogfood-lab/study-swarm`. https://github.com/dogfood-lab/study-swarm
 
 ## Engineering standards

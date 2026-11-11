@@ -35,10 +35,12 @@ const OUT = path.join(ROOT, 'docs', 'catalog.yaml');
 const DRY = process.argv.includes('--dry-run');
 
 const AREAS = [
+  ['research', 'Research',
+   'The research bench, its data and receipts, and the instruments and studies that measure models, media and the world.'],
   ['mcp-servers', 'MCP servers',
    'Servers and gateways that speak the Model Context Protocol, plus the tooling that tests them.'],
   ['training-and-datasets', 'Training and datasets',
-   'The local-model lifecycle: fine-tuning, datasets, training-step proof, and hardware capacity planning.'],
+   'The local-model lifecycle: datasets, fine-tuning, training-step proof, device routing, rented GPUs and the apps that run local models.'],
   ['image-and-media-pipelines', 'Image and media pipelines',
    'Programmatic generation and verification of images, 3D, video and audio.'],
   ['agent-infrastructure', 'Agent infrastructure',
@@ -58,7 +60,8 @@ const CLASS = {
   'mcp-voice-soundboard': ['mcp-servers', ['image-and-media-pipelines']],
   'polyglot-mcp': ['mcp-servers', []],
   'plain-sight': ['mcp-servers', ['image-and-media-pipelines']],
-  'ai-eyes-mcp': ['mcp-servers', ['image-and-media-pipelines']],
+  // retired 2026-11: ai-eyes-mcp (archived)
+  // 'ai-eyes-mcp': ['mcp-servers', ['image-and-media-pipelines']],
   'sensor-humor': ['mcp-servers', []],
   'mcp-tool-registry': ['mcp-servers', []],
   'mcp-stress-test': ['mcp-servers', []],
@@ -145,6 +148,34 @@ const CLASS = {
   'repomesh': ['ledger-and-verification', []],
   'xrpl-creator-capsule': ['ledger-and-verification', []],
   'cognate': ['ledger-and-verification', ['agent-infrastructure']],
+  // Added 2026-11-07 (repositories made public since the 2026-10-01 catalog).
+  'rnd': ['research', []],
+  'rnd-data': ['research', ['training-and-datasets']],
+  'sense-si': ['research', ['image-and-media-pipelines']],
+  'blindpanel': ['research', ['image-and-media-pipelines']],
+  'schumann-surface': ['research', []],
+  'aspire-si': ['training-and-datasets', ['research']],
+  'aspire-si-gates': ['training-and-datasets', []],
+  'reasoning-dataset-lab': ['training-and-datasets', ['research']],
+  'understanding-dataset-lab': ['training-and-datasets', ['research']],
+  'dataset-desk': ['training-and-datasets', ['image-and-media-pipelines']],
+  'role-set': ['training-and-datasets', []],
+  'runforge': ['training-and-datasets', []],
+  'scalarscope': ['training-and-datasets', []],
+  'interlock': ['training-and-datasets', ['research']],
+  'offrig': ['training-and-datasets', ['mcp-servers']],
+  'incontrol': ['training-and-datasets', []],
+  'watchdog': ['training-and-datasets', ['developer-tooling']],
+  'chips': ['agent-infrastructure', []],
+  'session-record': ['agent-infrastructure', []],
+  'studio-harness': ['developer-tooling', []],
+  'portrait-forge': ['image-and-media-pipelines', ['games-and-game-tooling']],
+  'sprite-foundry-2p5d': ['image-and-media-pipelines', ['games-and-game-tooling']],
+  'sprite-motion': ['image-and-media-pipelines', ['games-and-game-tooling']],
+  'sprite-motion-mcp': ['image-and-media-pipelines', ['mcp-servers']],
+  'visual-design-bible': ['games-and-game-tooling', ['image-and-media-pipelines']],
+  'portlight-bounty': ['games-and-game-tooling', []],
+  'lokey-typer': ['games-and-game-tooling', []],
 };
 
 // Dual-use calls that were contested and are now settled. Ratified 2026-09-17.
