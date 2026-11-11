@@ -1,6 +1,6 @@
 <p align="center">
-  <b>Open-source tooling for local-first AI development.</b><br>
-  MCP servers, CLIs, training pipelines, and game-production tooling that run on your own hardware.
+  <b>Open-source research and tooling for local-first AI.</b><br>
+  Measured research, datasets whose answers are proven by code, and the MCP servers, CLIs and training pipelines that research needs. All of it runs on your own hardware.
 </p>
 
 <p align="center">
@@ -9,10 +9,26 @@
   <a href="https://github.com/orgs/mcp-tool-shop-org/discussions"><img src="https://img.shields.io/badge/Discussions-Join-10b981?style=flat-square&logo=github&logoColor=white" alt="Discussions"></a>
   <a href="https://www.npmjs.com/search?q=%40mcptoolshop"><img src="https://img.shields.io/badge/npm-%40mcptoolshop-cb3837?style=flat-square&logo=npm&logoColor=white" alt="npm"></a>
   <br>
-  <img src="https://img.shields.io/badge/Repos-90+-1e3a5f?style=flat-square" alt="90+ Repositories">
+  <a href="https://mcp-tool-shop-org.github.io/rnd/"><img src="https://img.shields.io/badge/Newsletter-The%20Bench-f59e0b?style=flat-square" alt="The Bench, the research newsletter"></a>
+  <a href="https://huggingface.co/mcp-tool-shop"><img src="https://img.shields.io/badge/Hugging%20Face-mcp--tool--shop-ffcc4d?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face"></a>
+  <br>
+  <img src="https://img.shields.io/badge/Public%20repos-110+-1e3a5f?style=flat-square" alt="110+ public repositories">
   <img src="https://img.shields.io/badge/License-MIT-60a5fa?style=flat-square" alt="MIT License">
   <img src="https://img.shields.io/badge/Languages-8-1e3a5f?style=flat-square" alt="8 Languages">
 </p>
+
+---
+
+<h2 align="center">Research in the open</h2>
+
+<p align="center">The research comes first, and the tools below are what it needs. Numbers about hardware come from runs on our own workstation (an RTX 5090), with each run's record committed beside the result.</p>
+
+| | What it is |
+|:---:|:---:|
+| [The Bench](https://mcp-tool-shop-org.github.io/rnd/) | The research newsletter from [rnd](https://github.com/mcp-tool-shop-org/rnd): one issue each weekday on what was measured that day, with charts. Also on [npm](https://www.npmjs.com/package/@rnd-news/newsletter), [PyPI](https://pypi.org/project/mcptoolshop-rnd-newsletter/) and [Hugging Face](https://huggingface.co/datasets/mcp-tool-shop/rnd-newsletter) |
+| [readouts](https://mcp-tool-shop-org.github.io/readouts/) | Verified, source-backed knowledge bases. A topic moves here from rnd once its claims are checked |
+| Dataset labs | [reasoning-dataset-lab](https://github.com/mcp-tool-shop-org/reasoning-dataset-lab) (puzzles and verification items) and [understanding-dataset-lab](https://github.com/mcp-tool-shop-org/understanding-dataset-lab) (multi-party scenes, a prototype): code makes every answer key, and a model only writes the words |
+| [Hugging Face](https://huggingface.co/mcp-tool-shop) | Public datasets, fine-tuned models and demo Spaces |
 
 ---
 
@@ -69,7 +85,8 @@ npx @mcptoolshop/shipcheck audit
 | Area | Repositories | What they do |
 |:---:|:---:|:---:|
 | **MCP servers** | [tool-compass](https://github.com/mcp-tool-shop-org/tool-compass) · [ollama-intern-mcp](https://github.com/mcp-tool-shop-org/ollama-intern-mcp) · [mcp-voice-soundboard](https://github.com/mcp-tool-shop-org/mcp-voice-soundboard) · [polyglot-mcp](https://github.com/mcp-tool-shop-org/polyglot-mcp) · [plain-sight](https://github.com/mcp-tool-shop-org/plain-sight) | Tool discovery by intent, local-model job delegation, text-to-speech, GPU translation, image description |
-| **Training and datasets** | [backpropagate](https://github.com/mcp-tool-shop-org/backpropagate) · [style-dataset-lab](https://github.com/mcp-tool-shop-org/style-dataset-lab) · [repo-dataset](https://github.com/mcp-tool-shop-org/repo-dataset) · [backprop-trace](https://github.com/mcp-tool-shop-org/backprop-trace) · [runforge-vscode](https://github.com/mcp-tool-shop-org/runforge-vscode) | Headless fine-tuning with GGUF export, canon-bound visual datasets, contamination-checked code datasets, training-step verification |
+| **Research** | [rnd](https://github.com/mcp-tool-shop-org/rnd) · [readouts](https://github.com/mcp-tool-shop-org/readouts) · [aspire-si](https://github.com/mcp-tool-shop-org/aspire-si) · [interlock](https://github.com/mcp-tool-shop-org/interlock) · [offrig](https://github.com/mcp-tool-shop-org/offrig) | Research bench and newsletter, verified knowledge bases, judgment training with a learned critic, a measured device router for local models, priced rented-GPU runs |
+| **Datasets and training** | [reasoning-dataset-lab](https://github.com/mcp-tool-shop-org/reasoning-dataset-lab) · [understanding-dataset-lab](https://github.com/mcp-tool-shop-org/understanding-dataset-lab) · [style-dataset-lab](https://github.com/mcp-tool-shop-org/style-dataset-lab) · [dataset-desk](https://github.com/mcp-tool-shop-org/dataset-desk) · [repo-dataset](https://github.com/mcp-tool-shop-org/repo-dataset) · [backpropagate](https://github.com/mcp-tool-shop-org/backpropagate) | Datasets with answer keys proven by code, visual canon datasets, visual dataset review, contamination-checked code datasets, headless fine-tuning with GGUF export |
 | **Image and media pipelines** | [comfy-headless](https://github.com/mcp-tool-shop-org/comfy-headless) · [comfy-preflight](https://github.com/mcp-tool-shop-org/comfy-preflight) · [sprite-foundry](https://github.com/mcp-tool-shop-org/sprite-foundry) · [armature](https://github.com/mcp-tool-shop-org/armature) · [audiobooker](https://github.com/mcp-tool-shop-org/audiobooker) | Programmatic ComfyUI, pre-submission workflow gates, sprite generation, GLB-driven video, multi-voice audiobooks |
 | **Agent infrastructure** | [role-os](https://github.com/mcp-tool-shop-org/role-os) · [loadout-os](https://github.com/mcp-tool-shop-org/loadout-os) · [prism-verify](https://github.com/mcp-tool-shop-org/prism-verify) · [claude-guardian](https://github.com/mcp-tool-shop-org/claude-guardian) · [research-os](https://github.com/mcp-tool-shop-org/research-os) | Multi-agent orchestration, context routing, cross-family output verification, runtime health, research control plane |
 | **Developer tooling** | [shipcheck](https://github.com/mcp-tool-shop-org/shipcheck) · [site-theme](https://github.com/mcp-tool-shop-org/site-theme) · [repo-knowledge](https://github.com/mcp-tool-shop-org/repo-knowledge) · [registry-stats](https://github.com/mcp-tool-shop-org/registry-stats) · [npm-launcher](https://github.com/mcp-tool-shop-org/npm-launcher) · [housekeeping](https://github.com/mcp-tool-shop-org/housekeeping) | Release quality gates, Astro site templates, repo knowledge base, package download stats, verified binary launcher, organization-wide CI and hygiene audits |
